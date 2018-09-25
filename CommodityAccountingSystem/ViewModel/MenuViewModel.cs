@@ -29,7 +29,7 @@ namespace CommodityAccountingSystem.ViewModel
         #endregion
 
         #region Properties
-        public IMainWindows CodeBehind { get; set; }
+        public IMainWindows MainWindows { get; set; }
         #endregion
 
         #region Command
@@ -68,7 +68,7 @@ namespace CommodityAccountingSystem.ViewModel
         }
         private void OnLoadFirstUC()
         {
-            CodeBehind.LoadView(ViewType.First);
+            MainWindows.LoadView(ViewType.First);
         }
 
         private bool CanLoadSecondUC()
@@ -77,7 +77,7 @@ namespace CommodityAccountingSystem.ViewModel
         }
         private void OnLoadSecondUC()
         {
-            CodeBehind.LoadView(ViewType.Second);
+            MainWindows.LoadView(ViewType.Second);
         }
 
         private bool CanLoadMainUC()
@@ -86,7 +86,7 @@ namespace CommodityAccountingSystem.ViewModel
         }
         private void OnLoadMainUC()
         {
-            CodeBehind.LoadView(ViewType.Main);
+            MainWindows.LoadView(ViewType.Main);
         }
         #endregion
     }

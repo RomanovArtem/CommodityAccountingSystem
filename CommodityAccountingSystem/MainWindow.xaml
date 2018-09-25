@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommodityAccountingSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Example" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="Auto" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<!--Меню-->
+		<StackPanel Grid.Column="0" Margin="15">
+			<Button Command="{Binding LoadMainUCCommand, Mode=OneTime}"
+                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
+                        <Run Text="&#xE0A5;" />
+				</TextBlock>
+			</Button>
+			<Button Command="{Binding LoadFirstUCCommand, Mode=OneTime}"
+                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
+                        <Run Text="&#xE2AF;" />
+				</TextBlock>
+			</Button>
+			<Button Command="{Binding LoadSecondUCCommand, Mode=OneTime}"
+                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
+                        <Run Text="&#xE1E2;" />
+				</TextBlock>
+			</Button>
+		</StackPanel>
+		<!--Контент-->
+		<ContentPresenter Grid.Column="1" x:Name="OutputView" />
+	</Grid>
 </Window>
