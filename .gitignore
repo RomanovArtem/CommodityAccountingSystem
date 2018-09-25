@@ -7,3 +7,5 @@
 /.vs
 /CommodityAccountingSystem/.vs/CommodityAccountingSystem/v15/Server/sqlite3
 /CommodityAccountingSystem/Properties
+/CommodityAccountingSystem/obj/Debug/TempPE
+/CommodityAccountingSystem/obj/Debug/DesignTimeResolveAssemblyReferences.cache
