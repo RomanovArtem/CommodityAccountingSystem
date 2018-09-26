@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 
 namespace CommodityAccountingSystem.Model
 {
@@ -20,5 +21,13 @@ namespace CommodityAccountingSystem.Model
         /// Цена продажи
         /// </summary>
         public double SalePrice { get; set; }
+        /// <summary>
+        /// Категория товара
+        /// </summary>
+        public Category Category { get; set; }
+        /// <summary>
+        /// Производитель (фирма)
+        /// </summary>
+        public Manufacturer Manufacturer { get; set; }
     }
 }
