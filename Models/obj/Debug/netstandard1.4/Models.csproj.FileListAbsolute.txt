@@ -1,0 +1,8 @@
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\bin\Debug\netstandard1.4\Models.deps.json
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\bin\Debug\netstandard1.4\Models.dll
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\bin\Debug\netstandard1.4\Models.pdb
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\obj\Debug\netstandard1.4\Models.csprojAssemblyReference.cache
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\obj\Debug\netstandard1.4\Models.csproj.CoreCompileInputs.cache
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\obj\Debug\netstandard1.4\Models.AssemblyInfo.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\obj\Debug\netstandard1.4\Models.dll
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\Models\obj\Debug\netstandard1.4\Models.pdb

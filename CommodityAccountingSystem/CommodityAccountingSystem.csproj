@@ -94,14 +94,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Check.cs" />
-    <Compile Include="Model\IncomeAndExpense.cs" />
-    <Compile Include="Model\Message.cs" />
-    <Compile Include="Model\Purchase.cs" />
-    <Compile Include="Model\HistoryPrice.cs" />
-    <Compile Include="Model\HistorySales.cs" />
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="Model\Warehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

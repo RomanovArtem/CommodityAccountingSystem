@@ -7,8 +7,8 @@
       mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-		<TextBlock Text="Это FirstUC" FontSize="18" />
-		<TextBox Width="200" Margin="0,20,0,0" Text="{Binding InputText}" />
+		<TextBlock Text="Добавить товар" FontSize="18" />
+		<TextBox Width="200" Margin="0,20,0,0" Text="{Binding InputText}"/>
 		<Button Content="Click Me" Command="{Binding ShowMessageCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0,20,0,0"/>
 	</StackPanel>

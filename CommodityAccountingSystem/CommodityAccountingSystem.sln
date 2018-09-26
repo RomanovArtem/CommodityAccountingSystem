@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommodityAccountingSystem", "CommodityAccountingSystem.csproj", "{C09AB2B7-17B0-4768-BD90-29AB05DF5C2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C09AB2B7-17B0-4768-BD90-29AB05DF5C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09AB2B7-17B0-4768-BD90-29AB05DF5C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09AB2B7-17B0-4768-BD90-29AB05DF5C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
