@@ -1,7 +1,7 @@
 ﻿using Models;
 using System;
 
-namespace CommodityAccountingSystem.Model
+namespace Models
 {
     /// <summary>
     /// Товар

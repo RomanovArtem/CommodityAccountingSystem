@@ -1,6 +1,5 @@
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\bin\Debug\Models.dll
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\bin\Debug\Models.pdb
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\obj\Debug\Models.dll
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\Models\obj\Debug\Models.pdb

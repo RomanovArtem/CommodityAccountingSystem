@@ -1,10 +1,10 @@
-﻿using CommodityAccountingSystem.Model;
+﻿using Models;
 using System;
 using System.Collections.Generic;
 
 namespace Repositories.IRepositories
 {
-    public interface IProductRepositories
+    public interface IProductRepository
     {
         /// <summary>
         /// получение товара по id

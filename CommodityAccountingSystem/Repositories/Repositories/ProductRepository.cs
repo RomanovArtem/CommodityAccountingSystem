@@ -1,4 +1,4 @@
-﻿using CommodityAccountingSystem.Model;
+﻿using Models;
 using Repositories.IRepositories;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Repositories.Repositories
 {
-    class ProductRepositories : IProductRepositories
+    public class ProductRepository : IProductRepository
     {
         public Product GetProductById(Guid id)
         {

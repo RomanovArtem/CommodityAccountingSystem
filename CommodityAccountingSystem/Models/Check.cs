@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommodityAccountingSystem.Model
+namespace Models
 {
     /// <summary>
     /// Чек
