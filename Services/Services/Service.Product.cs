@@ -1,9 +1,6 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services.Services
 {
@@ -12,6 +9,11 @@ namespace Services.Services
         public Product GetProductById(Guid id)
         {
             return _productRepository.GetProductById(id); ;
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return _productRepository.GetProducts(); ;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,51 +9,58 @@ namespace CommodityAccountingSystem.View
     public class SecondViewModel : INotifyPropertyChanged
     {
         #region Fields
-        private IMainWindows _MainWindow;
+        private IMainWindows _mainWindow;
 
         /// <summary>
-        /// Список чисел для ComboBox
+        /// Список продуктов для ComboBox
         /// </summary>
-        private List<int> _NumbersList;
+        private List<string> productsList;
 
         /// <summary>
         /// Сообщение пользователю
         /// </summary>
-        private RelayCommand _ShowMessageCommand;
+        private RelayCommand _showMessageCommand;
 
         /// <summary>
         /// Выбранное число в списке чисел
         /// </summary>
-        private string _SelectedNumber;
+        private string _selectedNumber;
+
+        /// <summary>
+        /// Сервисы
+        /// </summary>
+        private Service _service;
+
         #endregion
 
         #region Constructors
         public SecondViewModel(IMainWindows mainWindows)
         {
-            _MainWindow = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
+            _mainWindow = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
 
-            //создаем список чисел
-            _NumbersList = Enumerable.Range(1, 10).ToList();
+            _service = new Service();
+
+            productsList = _service.GetProducts().Select(p => p.Title).ToList();
         }
         #endregion
 
         #region Properties
-        public List<int> NumbersList
+        public List<string> ProductsList
         {
-            get { return _NumbersList; }
+            get { return productsList; }
             set
             {
-                _NumbersList = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(NumbersList)));
+                productsList = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
             }
         }
 
         public string SelectedNumber
         {
-            get { return _SelectedNumber; }
+            get { return _selectedNumber; }
             set
             {
-                _SelectedNumber = value;
+                _selectedNumber = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedNumber)));
             }
         }
@@ -63,7 +71,7 @@ namespace CommodityAccountingSystem.View
         {
             get
             {
-                return _ShowMessageCommand = _ShowMessageCommand ??
+                return _showMessageCommand = _showMessageCommand ??
                   new RelayCommand(OnShowMessage, CanShowMessage);
             }
         }
@@ -77,7 +85,7 @@ namespace CommodityAccountingSystem.View
 
         private void OnShowMessage()
         {
-            _MainWindow.ShowMessage($"Вы выбрали: {SelectedNumber}");
+            _mainWindow.ShowMessage($"Вы выбрали: {SelectedNumber}");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-		<TextBlock Text="Это SecondUC" FontSize="18" />
+		<TextBlock Text="Выбор товара" FontSize="18" />
 		<ComboBox Width="100" Margin="0,20,0,0"
-                  ItemsSource="{Binding NumbersList}"
+                  ItemsSource="{Binding ProductsList}"
                   SelectedItem="{Binding SelectedNumber}"/>
 		<Button Content="Click Me" Command="{Binding ShowMessageCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0,20,0,0"/>

@@ -8,6 +8,11 @@ namespace Repositories.Repositories
 {
     public class ProductRepository : IProductRepository
     {
+        public ProductRepository()
+        {
+            var a = DataBase.Products;
+        }
+
         public Product GetProductById(Guid id)
         {
             var product = DataBase.Products.FirstOrDefault(p => p.Id == id);
@@ -16,7 +21,7 @@ namespace Repositories.Repositories
 
         public IEnumerable<Product> GetProducts()
         {
-            return DataBase.Products;
+            return DataBase.Products.ToList();
         }
     }
 }
