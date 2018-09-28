@@ -8,7 +8,9 @@
              d:DesignHeight="600" d:DesignWidth="600">
 	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
 		<TextBlock Text="Добавить товар" FontSize="18" />
-		<TextBox Width="200" Margin="0,20,0,0" Text="{Binding InputText}"/>
+		<ComboBox Width="100" Margin="0,20,0,0"
+                  ItemsSource="{Binding ProductsList}"
+                  SelectedItem="{Binding SelectedNumber}"/>
 		<Button Content="Click Me" Command="{Binding ShowMessageCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0,20,0,0"/>
 	</StackPanel>
