@@ -14,7 +14,7 @@ namespace CommodityAccountingSystem.View
         /// <summary>
         /// Список продуктов для ComboBox
         /// </summary>
-        private List<string> productsList;
+        private List<Models.Product> productsList;
 
         /// <summary>
         /// Сообщение пользователю
@@ -40,12 +40,12 @@ namespace CommodityAccountingSystem.View
 
             _service = new Service();
 
-            productsList = _service.GetProducts().Select(p => p.Title).ToList();
+            productsList = _service.GetProducts().ToList();
         }
         #endregion
 
         #region Properties
-        public List<string> ProductsList
+        public List<Models.Product> ProductsList
         {
             get { return productsList; }
             set
