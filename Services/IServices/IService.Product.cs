@@ -9,5 +9,7 @@ namespace Services.IServices
         Product GetProductById(Guid id);
 
         IEnumerable<Product> GetProducts();
+
+        IEnumerable<Product> GetProductsByCategoryId(Guid id);
     }
 }

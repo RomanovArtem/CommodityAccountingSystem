@@ -18,5 +18,12 @@ namespace Repositories.IRepositories
         /// </summary>
         /// <returns></returns>
         IEnumerable<Product> GetProducts();
+
+        /// <summary>
+        /// получение товаров по id категории
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        IEnumerable<Product> GetProductsByCategoryId(Guid id);
     }
 }

@@ -10,18 +10,21 @@ namespace Repositories.Repositories
     {
         public ProductRepository()
         {
-            var a = DataBase.Products;
         }
 
         public Product GetProductById(Guid id)
         {
-            var product = DataBase.Products.FirstOrDefault(p => p.Id == id);
-            return product;
+            return DataBase.Products.FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetProducts()
         {
             return DataBase.Products.ToList();
+        }
+
+        public IEnumerable<Product> GetProductsByCategoryId(Guid id)
+        {
+            return DataBase.Products.Where(p => p.Category.Id == id).ToList();
         }
     }
 }

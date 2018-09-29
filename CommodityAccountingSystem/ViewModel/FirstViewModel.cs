@@ -10,16 +10,21 @@ namespace CommodityAccountingSystem.View
     {
         #region Fields
         /// <summary>
-        /// Список категорий для ComboBox
+        /// Список названий категорий 
         /// </summary>
-        private List<string> productsList;
-
-        private IMainWindows _MainWindows;
+        private List<string> _categoriesTitleList;
 
         /// <summary>
-        /// Введенная строка в TextBox
+        /// Список продуктов
         /// </summary>
-        public string _InputText;
+        private List<Models.Product> _productsList;
+
+        private IMainWindows _mainWindows;
+
+        /// <summary>
+        /// Выбранная категория
+        /// </summary>
+        public string _selectedCategory;
 
         /// <summary>
         /// Сообщение пользователю
@@ -35,24 +40,57 @@ namespace CommodityAccountingSystem.View
         #region Constructors
         public FirstViewModel(IMainWindows mainWindows)
         {
-            _MainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
+            _mainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
 
             _service = new Service();
 
-            productsList = _service.GetProducts().Select(p=>p.Title).ToList();
+            _categoriesTitleList = _service.GetCategories().Select(p => p.Title).ToList();
+
+            _productsList = _service.GetProducts().ToList();
         }
         #endregion
 
         #region Properties
-        public List<string> ProductsList
+        public List<Models.Product> ProductsList
         {
-            get { return productsList; }
+            get
+            {
+                if (!string.IsNullOrEmpty(SelectedCategory))
+                {
+                    var idCategory = _service.GetCategories().Where(c => c.Title == SelectedCategory).FirstOrDefault().Id;
+                    _productsList = _service.GetProductsByCategoryId(idCategory).ToList();
+                }
+
+                return _productsList;
+            }
             set
             {
-                productsList = value;
+                _productsList = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
             }
         }
+
+        public List<string> CategoriesTitleList
+        {
+            get { return _categoriesTitleList; }
+            set
+            {
+                _categoriesTitleList = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(CategoriesTitleList)));
+            }
+        }
+
+        public string SelectedCategory
+        {
+            get { return _selectedCategory; }
+            set
+            {
+                _selectedCategory = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedCategory)));
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -74,7 +112,7 @@ namespace CommodityAccountingSystem.View
 
         private void OnShowMessage()
         {
-            _MainWindows.ShowMessage($"Вы ввели:");
+            _mainWindows.ShowMessage($"Вы ввели: {SelectedCategory} ");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -15,5 +15,9 @@ namespace Services.Services
         {
             return _productRepository.GetProducts(); ;
         }
+        public IEnumerable<Product> GetProductsByCategoryId(Guid id)
+        {
+            return _productRepository.GetProductsByCategoryId(id);
+        }
     }
 }

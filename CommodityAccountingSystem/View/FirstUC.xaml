@@ -6,12 +6,33 @@
       xmlns:local="clr-namespace:CommodityAccountingSystem.View"
       mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
-	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-		<TextBlock Text="Добавить товар" FontSize="18" />
-		<ComboBox Width="100" Margin="0,20,0,0"
-                  ItemsSource="{Binding ProductsList}"
-                  SelectedItem="{Binding SelectedNumber}"/>
-		<Button Content="Click Me" Command="{Binding ShowMessageCommand, Mode=OneTime}"
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+			<TextBlock Text="Выбрать категрию" FontSize="18"/>
+			<ComboBox Width="100" Margin="0,20,0,0"
+                  ItemsSource="{Binding CategoriesTitleList}"
+                  SelectedItem="{Binding SelectedCategory}"/>
+			<Button Content="Click Me" Command="{Binding ShowMessageCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0,20,0,0"/>
-	</StackPanel>
+		</StackPanel>
+		<DataGrid Grid.Column="0" Grid.Row="1" AutoGenerateColumns="false" Grid.ColumnSpan="3" Grid.RowSpan="2" ItemsSource="{Binding ProductsList}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*" />
+				<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
+				<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
+				<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
+				<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
 </UserControl>
