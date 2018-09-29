@@ -1,11 +1,19 @@
-﻿using System;
+﻿using Services.Services;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace CommodityAccountingSystem.View
 {
     public class FirstViewModel : INotifyPropertyChanged
     {
         #region Fields
+        /// <summary>
+        /// Список категорий для ComboBox
+        /// </summary>
+        private List<string> productsList;
+
         private IMainWindows _MainWindows;
 
         /// <summary>
@@ -17,23 +25,32 @@ namespace CommodityAccountingSystem.View
         /// Сообщение пользователю
         /// </summary>
         private RelayCommand _ShowMessageCommand;
+
+        /// <summary>
+        /// Сервисы
+        /// </summary>
+        private Service _service;
         #endregion
 
         #region Constructors
         public FirstViewModel(IMainWindows mainWindows)
         {
             _MainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
+
+            _service = new Service();
+
+            productsList = _service.GetProducts().Select(p=>p.Title).ToList();
         }
         #endregion
 
         #region Properties
-        public string InputText
+        public List<string> ProductsList
         {
-            get { return _InputText; }
+            get { return productsList; }
             set
             {
-                _InputText = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputText)));
+                productsList = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
             }
         }
         #endregion
@@ -57,7 +74,7 @@ namespace CommodityAccountingSystem.View
 
         private void OnShowMessage()
         {
-            _MainWindows.ShowMessage($"Вы ввели: {InputText}");
+            _MainWindows.ShowMessage($"Вы ввели:");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
