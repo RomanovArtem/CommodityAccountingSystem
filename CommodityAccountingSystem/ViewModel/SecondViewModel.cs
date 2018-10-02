@@ -12,6 +12,11 @@ namespace CommodityAccountingSystem.View
         private IMainWindows _mainWindow;
 
         /// <summary>
+        /// Переход к первой вьюшке
+        /// </summary>
+        private RelayCommand _LoadFirstUCCommand;
+
+        /// <summary>
         /// Список продуктов для ComboBox
         /// </summary>
         private List<Models.Product> productsList;
@@ -67,6 +72,15 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Commands
+        public RelayCommand LoadFirstUCCommand
+        {
+            get
+            {
+                return _LoadFirstUCCommand = _LoadFirstUCCommand ??
+                  new RelayCommand(OnLoadFirstUC, CanLoadFirstUC);
+            }
+        }
+
         public RelayCommand ShowMessageCommand
         {
             get
@@ -78,6 +92,16 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Methods
+
+        private bool CanLoadFirstUC()
+        {
+            return true;
+        }
+        private void OnLoadFirstUC()
+        {
+            _mainWindow.LoadView(ViewType.First);
+        }
+
         private bool CanShowMessage()
         {
             return true;
