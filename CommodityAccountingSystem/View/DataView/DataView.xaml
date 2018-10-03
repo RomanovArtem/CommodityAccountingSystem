@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="CommodityAccountingSystem.View.DataView"
+﻿<UserControl x:Class="CommodityAccountingSystem.View.DataView.DataView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:CommodityAccountingSystem.View"
+             xmlns:local="clr-namespace:CommodityAccountingSystem.View.DataView"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
 	<Grid>
@@ -18,27 +18,19 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 		<StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Top">
-			<Button Command="{Binding LoadMainUCCommand, Mode=OneTime}"
+			<Button Command="{Binding LoadProductComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xe138;" />
 				</TextBlock>
 			</Button>
-			<Button Command="{Binding LoadFirstUCCommand, Mode=OneTime}"
+			<Button Command="{Binding LoadProductComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xE2AF;" />
 				</TextBlock>
 			</Button>
 		</StackPanel>
-		<DataGrid Grid.Column="0" Grid.Row="1" AutoGenerateColumns="false" Grid.ColumnSpan="3" Grid.RowSpan="2" ItemsSource="{Binding ProductsList}">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
-				<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
-				<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
-				<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
-				<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
-			</DataGrid.Columns>
-		</DataGrid>
+		<ContentPresenter Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" x:Name="OutputView" />
 	</Grid>
 </UserControl>

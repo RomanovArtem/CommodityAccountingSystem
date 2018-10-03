@@ -1,5 +1,6 @@
 ﻿using CommodityAccountingSystem.View;
 using CommodityAccountingSystem.ViewModel;
+using CommodityAccountingSystem.View.DataView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,7 +92,7 @@ namespace CommodityAccountingSystem.View
                     this.OutputView.Content = viewF;
                     break;
                 case ViewType.DataView:
-                    DataView viewS = new DataView();
+                    DataView.DataView viewS = new DataView.DataView();
                     DataViewModel vmS = new DataViewModel(this);
                     viewS.DataContext = vmS;
                     this.OutputView.Content = viewS;

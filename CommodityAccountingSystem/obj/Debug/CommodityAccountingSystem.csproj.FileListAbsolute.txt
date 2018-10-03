@@ -24,5 +24,7 @@ C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.csproj.CopyComplete
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\MainWindow.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\MainWindow.baml
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView.g.cs
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView.baml
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\DataView.g.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\DataView.baml
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\ProductView.g.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\ProductView.baml

@@ -1,4 +1,5 @@
-﻿using Services.Services;
+﻿using CommodityAccountingSystem.View.DataView;
+using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,8 @@ namespace CommodityAccountingSystem.View
     {
         #region Fields
         private IMainWindows _mainWindow;
+
+        private IDataView _dataView;
 
         /// <summary>
         /// Переход к первой вьюшке
@@ -47,9 +50,21 @@ namespace CommodityAccountingSystem.View
 
             productsList = _service.GetProducts().ToList();
         }
+
+        public DataViewModel(IDataView dataView)
+        {
+            _dataView = dataView ?? throw new ArgumentNullException(nameof(dataView));
+        }
+
+        public DataViewModel()
+        {
+        }
         #endregion
 
         #region Properties
+        public IDataView DataView { get; set; }
+
+
         public List<Models.Product> ProductsList
         {
             get { return productsList; }
@@ -99,7 +114,7 @@ namespace CommodityAccountingSystem.View
         }
         private void OnLoadFirstUC()
         {
-            _mainWindow.LoadView(ViewType.First);
+            _dataView.LoadView(View.DataView.ViewType.Product);
         }
 
         private bool CanShowMessage()
