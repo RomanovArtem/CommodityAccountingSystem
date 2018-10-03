@@ -29,7 +29,8 @@ namespace CommodityAccountingSystem.View.DataView
     /// </summary>
     public enum ViewType
     {
-        Product
+        Products,
+        Categories,
     }
 
     /// <summary>
@@ -47,28 +48,40 @@ namespace CommodityAccountingSystem.View.DataView
         private void DataWindow_Loaded(object sender, RoutedEventArgs e)
         {
             //загрузка вьюмодел для кнопок меню
-            DataViewModel vm = new DataViewModel();
+            DataViewModel vm = new DataViewModel(this);
             //даем доступ к этому кодбихайнд
             vm.DataView = this;
             //делаем эту вьюмодел контекстом данных
             this.DataContext = vm;
 
+           // DataViewModel viewModelData = new DataViewModel(this);
+
             //загрузка стартовой View
-            LoadView(ViewType.Product);
+            LoadView(ViewType.Products);
         }
 
         public void LoadView(ViewType typeView)
         {
             switch (typeView)
             {
-                case ViewType.Product:
+                case ViewType.Products:
                     //загружаем вьюшку, ее вьюмодель
-                    ProductView view = new ProductView();
-                    ProductViewModel vm = new ProductViewModel(this);
+                    ProductView viewProduct = new ProductView();
+                    ProductViewModel viewModelProducts = new ProductViewModel(this);
                     //связываем их м/собой
-                    view.DataContext = vm;
+                    viewProduct.DataContext = viewModelProducts;
                     //отображаем
-                    this.OutputView.Content = view;
+                    this.OutputView.Content = viewProduct;
+                    break;
+
+                case ViewType.Categories:
+                    //загружаем вьюшку, ее вьюмодель
+                    CategoryView viewCategories = new CategoryView();
+                    CategoryViewModel viewModelCategories = new CategoryViewModel(this);
+                    //связываем их м/собой
+                    viewCategories.DataContext = viewModelCategories;
+                    //отображаем
+                    this.OutputView.Content = viewCategories;
                     break;
             }
         }

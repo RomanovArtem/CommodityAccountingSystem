@@ -4,10 +4,10 @@ using System.ComponentModel;
 
 namespace CommodityAccountingSystem.ViewModel
 {
-    public class ProductViewModel : INotifyPropertyChanged
+    public class CategoryViewModel : INotifyPropertyChanged
     {
         #region Fields
-       
+
 
         private IDataView _dataView;
 
@@ -16,30 +16,31 @@ namespace CommodityAccountingSystem.ViewModel
         /// </summary>
         public string _selectedCategory;
 
-      
+
         #endregion
 
         #region Constructors
-        public ProductViewModel(IDataView dataView)
+        public CategoryViewModel(IDataView dataView)
         {
             _dataView = dataView ?? throw new ArgumentNullException(nameof(dataView));
         }
         #endregion
 
         #region Properties
-       
+
 
         #endregion
 
         #region Commands
-        
+
         #endregion
 
         #region Methods
-       
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         #endregion
     }
 }
+

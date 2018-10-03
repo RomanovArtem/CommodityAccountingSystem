@@ -18,13 +18,13 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 		<StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Top">
-			<Button Command="{Binding LoadProductComand, Mode=OneTime}"
+			<Button Command="{Binding LoadProductsComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xe138;" />
 				</TextBlock>
 			</Button>
-			<Button Command="{Binding LoadProductComand, Mode=OneTime}"
+			<Button Command="{Binding LoadCategoriesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xE2AF;" />

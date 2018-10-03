@@ -28,3 +28,5 @@ C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\DataView.baml
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\ProductView.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\ProductView.baml
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\CategoryView.g.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\CategoryView.baml

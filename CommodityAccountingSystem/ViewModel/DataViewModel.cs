@@ -17,7 +17,10 @@ namespace CommodityAccountingSystem.View
         /// <summary>
         /// Переход к первой вьюшке
         /// </summary>
-        private RelayCommand _LoadFirstUCCommand;
+        private RelayCommand _LoadProductsViewCommand;
+
+        private RelayCommand _LoadCategoriesViewCommand;
+
 
         /// <summary>
         /// Список продуктов для ComboBox
@@ -87,12 +90,21 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Commands
-        public RelayCommand LoadFirstUCCommand
+        public RelayCommand LoadProductsComand
         {
             get
             {
-                return _LoadFirstUCCommand = _LoadFirstUCCommand ??
-                  new RelayCommand(OnLoadFirstUC, CanLoadFirstUC);
+                return _LoadProductsViewCommand = _LoadProductsViewCommand ??
+                  new RelayCommand(OnLoadProductsView, CanLoadProductsView);
+            }
+        }
+
+        public RelayCommand LoadCategoriesComand
+        {
+            get
+            {
+                return _LoadCategoriesViewCommand = _LoadCategoriesViewCommand ??
+                  new RelayCommand(OnLoadCategoriesView, CanLoadCategoriesView);
             }
         }
 
@@ -108,13 +120,21 @@ namespace CommodityAccountingSystem.View
 
         #region Methods
 
-        private bool CanLoadFirstUC()
+        private bool CanLoadProductsView()
         {
             return true;
         }
-        private void OnLoadFirstUC()
+        private void OnLoadProductsView()
         {
-            _dataView.LoadView(View.DataView.ViewType.Product);
+            _dataView.LoadView(View.DataView.ViewType.Products);
+        }
+        private bool CanLoadCategoriesView()
+        {
+            return true;
+        }
+        private void OnLoadCategoriesView()
+        {
+            _dataView.LoadView(View.DataView.ViewType.Categories);
         }
 
         private bool CanShowMessage()
