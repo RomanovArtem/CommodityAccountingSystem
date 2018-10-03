@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CommodityAccountingSystem
+namespace CommodityAccountingSystem.View
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -42,7 +42,7 @@ namespace CommodityAccountingSystem
     {
         Main,
         First,
-        Second
+        DataView
     }
 
     /// <summary>
@@ -90,15 +90,13 @@ namespace CommodityAccountingSystem
                     viewF.DataContext = vmF;
                     this.OutputView.Content = viewF;
                     break;
-                case ViewType.Second:
-                    SecondUC viewS = new SecondUC();
-                    SecondViewModel vmS = new SecondViewModel(this);
+                case ViewType.DataView:
+                    DataView viewS = new DataView();
+                    DataViewModel vmS = new DataViewModel(this);
                     viewS.DataContext = vmS;
                     this.OutputView.Content = viewS;
                     break;
             }
-
-
         }
 
         public void ShowMessage(string message)

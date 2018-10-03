@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace CommodityAccountingSystem.View
 {
-    public class SecondViewModel : INotifyPropertyChanged
+    public class DataViewModel : INotifyPropertyChanged
     {
         #region Fields
         private IMainWindows _mainWindow;
@@ -39,7 +39,7 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Constructors
-        public SecondViewModel(IMainWindows mainWindows)
+        public DataViewModel(IMainWindows mainWindows)
         {
             _mainWindow = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
 

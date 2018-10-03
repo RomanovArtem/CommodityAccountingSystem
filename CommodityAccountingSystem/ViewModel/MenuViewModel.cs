@@ -11,9 +11,9 @@ namespace CommodityAccountingSystem.ViewModel
         private RelayCommand _LoadFirstUCCommand;
 
         /// <summary>
-        /// Переход ко Второй вьюшке
+        /// Переход ко вью данных
         /// </summary>
-        private RelayCommand _LoadSecondUCCommand;
+        private RelayCommand _LoadDataViewCommand;
 
         /// <summary>
         /// Возвращение к главной вьюшке
@@ -42,12 +42,12 @@ namespace CommodityAccountingSystem.ViewModel
             }
         }
 
-        public RelayCommand LoadSecondUCCommand
+        public RelayCommand LoadDataViewCommand
         {
             get
             {
-                return _LoadSecondUCCommand = _LoadSecondUCCommand ??
-                  new RelayCommand(OnLoadSecondUC, CanLoadSecondUC);
+                return _LoadDataViewCommand = _LoadDataViewCommand ??
+                  new RelayCommand(OnLoadDataView, CanLoadDataView);
             }
         }
 
@@ -71,13 +71,13 @@ namespace CommodityAccountingSystem.ViewModel
             MainWindows.LoadView(ViewType.First);
         }
 
-        private bool CanLoadSecondUC()
+        private bool CanLoadDataView()
         {
             return true;
         }
-        private void OnLoadSecondUC()
+        private void OnLoadDataView()
         {
-            MainWindows.LoadView(ViewType.Second);
+            MainWindows.LoadView(ViewType.DataView);
         }
 
         private bool CanLoadMainUC()
