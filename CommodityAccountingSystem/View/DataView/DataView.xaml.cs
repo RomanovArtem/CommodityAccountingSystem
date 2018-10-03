@@ -54,7 +54,7 @@ namespace CommodityAccountingSystem.View.DataView
             //делаем эту вьюмодел контекстом данных
             this.DataContext = vm;
 
-           // DataViewModel viewModelData = new DataViewModel(this);
+            // DataViewModel viewModelData = new DataViewModel(this);
 
             //загрузка стартовой View
             LoadView(ViewType.Products);
@@ -88,7 +88,7 @@ namespace CommodityAccountingSystem.View.DataView
 
         public void ShowMessage(string message)
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show(message);
         }
     }
 }
