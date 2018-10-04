@@ -32,7 +32,7 @@
 				</TextBlock>
 			</Button>
 		</StackPanel>-->
-		<DataGrid Grid.Column="0" Grid.Row="1" AutoGenerateColumns="false" Grid.ColumnSpan="3" Grid.RowSpan="2" ItemsSource="{Binding ProductsList}">
+		<DataGrid Grid.Column="0" Grid.Row="0" AutoGenerateColumns="false" Grid.ColumnSpan="3" Grid.RowSpan="3" ItemsSource="{Binding ProductsList}">
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
 				<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>

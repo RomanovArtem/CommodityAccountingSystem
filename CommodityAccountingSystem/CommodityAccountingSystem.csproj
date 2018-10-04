@@ -55,7 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\DataViewModel\CategoryViewModel.cs" />
-    <Compile Include="ViewModel\FirstViewModel.cs" />
+    <Compile Include="ViewModel\AddDataViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\ProductViewModel.cs" />
@@ -67,8 +67,8 @@
     <Compile Include="View\DataView\ProductView.xaml.cs">
       <DependentUpon>ProductView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\FirstUC.xaml.cs">
-      <DependentUpon>FirstUC.xaml</DependentUpon>
+    <Compile Include="View\AddDataView.xaml.cs">
+      <DependentUpon>AddDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainUC.xaml.cs">
       <DependentUpon>MainUC.xaml</DependentUpon>
@@ -96,7 +96,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\FirstUC.xaml">
+    <Page Include="View\AddDataView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

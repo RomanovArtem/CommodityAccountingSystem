@@ -5,9 +5,9 @@ namespace CommodityAccountingSystem.View
     /// <summary>
     /// Interaction logic for FirstUC.xaml
     /// </summary>
-    public partial class FirstUC : UserControl
+    public partial class AddDataView : UserControl
     {
-        public FirstUC()
+        public AddDataView()
         {
             InitializeComponent();
         }

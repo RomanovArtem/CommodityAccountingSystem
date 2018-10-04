@@ -12,6 +12,11 @@ namespace Repositories.Repositories
         {
         }
 
+        public void AddProduct(Product product)
+        {
+            DataBase.Products.Add(product);
+        }
+
         public Product GetProductById(Guid id)
         {
             return DataBase.Products.FirstOrDefault(p => p.Id == id);

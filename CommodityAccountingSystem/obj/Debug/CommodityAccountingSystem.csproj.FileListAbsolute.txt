@@ -1,12 +1,10 @@
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\bin\Debug\CommodityAccountingSystem.exe.config
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\bin\Debug\CommodityAccountingSystem.exe
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\bin\Debug\CommodityAccountingSystem.pdb
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\FirstUC.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\MainUC.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\App.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem_MarkupCompile.cache
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem_MarkupCompile.lref
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\FirstUC.baml
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\MainUC.baml
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.g.resources
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.Properties.Resources.resources
@@ -30,3 +28,5 @@ C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\ProductView.baml
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\CategoryView.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\CategoryView.baml
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView.g.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView.baml

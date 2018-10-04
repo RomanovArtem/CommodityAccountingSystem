@@ -71,7 +71,6 @@ namespace CommodityAccountingSystem.View
         }
 
 
-
         public void LoadView(ViewType typeView)
         {
             switch (typeView)
@@ -86,8 +85,8 @@ namespace CommodityAccountingSystem.View
                     this.OutputView.Content = view;
                     break;
                 case ViewType.First:
-                    FirstUC viewF = new FirstUC();
-                    FirstViewModel vmF = new FirstViewModel(this);
+                    AddDataView viewF = new AddDataView();
+                    AddDataViewModel vmF = new AddDataViewModel(this);
                     viewF.DataContext = vmF;
                     this.OutputView.Content = viewF;
                     break;

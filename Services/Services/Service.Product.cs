@@ -19,5 +19,10 @@ namespace Services.Services
         {
             return _productRepository.GetProductsByCategoryId(id);
         }
+
+        public void AddProduct(Product product)
+        {
+            _productRepository.AddProduct(product);
+        }
     }
 }
