@@ -15,18 +15,22 @@ namespace CommodityAccountingSystem.View
 
         private string _inputTitleProduct;
 
+        private string _inputTitleCategory;
+
         private double _inputPurchasePriceProduct;
 
         private double _inputSalePriceProduct;
 
-        private List<Category> _categoriesList;
+        private RelayCommand _addProductCommand;
 
-        private RelayCommand _onAddProductCommand;
+        private RelayCommand _addCategoryCommand;
 
         /// <summary>
         /// Список названий категорий 
         /// </summary>
         private List<string> _categoriesTitleList;
+
+        private List<Category> _categoriesList;
 
         /// <summary>
         /// Выбранная категория
@@ -47,11 +51,22 @@ namespace CommodityAccountingSystem.View
             _service = new Service();
 
             _categoriesList = _service.GetCategories().ToList();
-            _categoriesTitleList = _categoriesList.Select(a => a.Title).ToList();
+            _categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
         }
         #endregion
 
         #region Properties
+        public List<Category> CategoriesList
+        {
+            get { return _categoriesList; }
+            set
+            {
+                _categoriesList = value;
+                CategoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(CategoriesList)));
+            }
+        }
+
         public List<string> CategoriesTitleList
         {
             get { return _categoriesTitleList; }
@@ -102,6 +117,16 @@ namespace CommodityAccountingSystem.View
             }
         }
 
+        public string InputTitleCategory
+        {
+            get { return _inputTitleCategory; }
+            set
+            {
+                _inputTitleCategory = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputTitleCategory)));
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -109,30 +134,50 @@ namespace CommodityAccountingSystem.View
         {
             get
             {
-                return _onAddProductCommand = _onAddProductCommand ??
-                  new RelayCommand(OnShowMessage, CanShowMessage);
+                return _addProductCommand = _addProductCommand ??
+                  new RelayCommand(AddProduct, CanAdd);
+            }
+        }
+
+        public RelayCommand AddCategoryCommand
+        {
+            get
+            {
+                return _addCategoryCommand = _addCategoryCommand ??
+                  new RelayCommand(AddCategory, CanAdd);
             }
         }
         #endregion
 
         #region Methods
-        private bool CanShowMessage()
+        private bool CanAdd()
         {
             return true;
         }
 
-        private void OnShowMessage()
+        private void AddProduct()
         {
-            _mainWindows.ShowMessage($"Вы ввели:  {InputTitleProduct},  {InputPurchasePriceProduct}, {InputSalePriceProduct}, {_categoriesList.FirstOrDefault(c => c.Title == SelectedCategory).Id}");
             var product = new Product
             {
-                Id = new Guid(),
+                Id = Guid.NewGuid(),
                 Title = InputTitleProduct,
                 PurchasePrice = InputPurchasePriceProduct,
-                SalePrice =  InputSalePriceProduct,
+                SalePrice = InputSalePriceProduct,
                 Category = _categoriesList.FirstOrDefault(c => c.Title == SelectedCategory)
             };
             _service.AddProduct(product);
+        }
+
+        private void AddCategory()
+        {
+            var category = new Category
+            {
+                Id = Guid.NewGuid(),
+                Title = InputTitleCategory
+            };
+            _service.AddCategory(category);
+
+            CategoriesList = _service.GetCategories().ToList();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -25,5 +25,10 @@ namespace Repositories.Repositories
         {
             return DataBase.Categories.ToList();
         }
+
+        public void AddCategory(Category category)
+        {
+            DataBase.Categories.Add(category);
+        }
     }
 }

@@ -21,5 +21,11 @@ namespace Repositories.IRepositories
         /// </summary>
         /// <returns></returns>
         IEnumerable<Category> GetCategories();
+
+        /// <summary>
+        /// добавление категории
+        /// </summary>
+        /// <param name="category"></param>
+        void AddCategory(Category category);
     }
 }

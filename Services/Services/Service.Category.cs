@@ -18,5 +18,10 @@ namespace Services.Services
         {
             return _categoryRepository.GetCategories(); ;
         }
+
+        public void AddCategory(Category category)
+        {
+            _categoryRepository.AddCategory(category);
+        }
     }
 }
