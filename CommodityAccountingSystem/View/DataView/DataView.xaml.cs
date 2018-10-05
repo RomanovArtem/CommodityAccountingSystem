@@ -1,4 +1,5 @@
 ﻿using CommodityAccountingSystem.ViewModel;
+using CommodityAccountingSystem.ViewModel.DataViewModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,6 +32,7 @@ namespace CommodityAccountingSystem.View.DataView
     {
         Products,
         Categories,
+        HistorySales,
     }
 
     /// <summary>
@@ -82,6 +84,16 @@ namespace CommodityAccountingSystem.View.DataView
                     viewCategories.DataContext = viewModelCategories;
                     //отображаем
                     this.OutputView.Content = viewCategories;
+                    break;
+
+                case ViewType.HistorySales:
+                    //загружаем вьюшку, ее вьюмодель
+                    HistorySalesView viewHistorySales = new HistorySalesView();
+                    HistorySalesViewModel viewModelHistorySales = new HistorySalesViewModel(this);
+                    //связываем их м/собой
+                    viewHistorySales.DataContext = viewModelHistorySales;
+                    //отображаем
+                    this.OutputView.Content = viewHistorySales;
                     break;
             }
         }

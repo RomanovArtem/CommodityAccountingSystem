@@ -30,3 +30,5 @@ C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\CategoryView.baml
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView.g.cs
 C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView.baml
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\HistorySalesView.g.cs
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\DataView\HistorySalesView.baml

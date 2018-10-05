@@ -17,12 +17,17 @@ namespace CommodityAccountingSystem.View
         /// <summary>
         /// Переход к товарам
         /// </summary>
-        private RelayCommand _LoadProductsViewCommand;
+        private RelayCommand _loadProductsViewCommand;
 
         /// <summary>
         /// переход к категориям
         /// </summary>
-        private RelayCommand _LoadCategoriesViewCommand;
+        private RelayCommand _loadCategoriesViewCommand;
+
+        /// <summary>
+        /// переход к истории продаж
+        /// </summary>
+        private RelayCommand _loadHistorySalesComand;
 
         #endregion
 
@@ -51,7 +56,7 @@ namespace CommodityAccountingSystem.View
         {
             get
             {
-                return _LoadProductsViewCommand = _LoadProductsViewCommand ??
+                return _loadProductsViewCommand = _loadProductsViewCommand ??
                   new RelayCommand(OnLoadProductsView, CanLoadProductsView);
             }
         }
@@ -60,10 +65,20 @@ namespace CommodityAccountingSystem.View
         {
             get
             {
-                return _LoadCategoriesViewCommand = _LoadCategoriesViewCommand ??
+                return _loadCategoriesViewCommand = _loadCategoriesViewCommand ??
                   new RelayCommand(OnLoadCategoriesView, CanLoadCategoriesView);
             }
         }
+
+        public RelayCommand LoadHistorySalesComand
+        {
+            get
+            {
+                return _loadHistorySalesComand = _loadHistorySalesComand ??
+                  new RelayCommand(OnLoadHistorySalesView, CanLoadHistorySalesView);
+            }
+        }
+        
         #endregion
 
         #region Methods
@@ -83,6 +98,15 @@ namespace CommodityAccountingSystem.View
         private void OnLoadCategoriesView()
         {
             _dataView.LoadView(View.DataView.ViewType.Categories);
+        }
+
+        private bool CanLoadHistorySalesView()
+        {
+            return true;
+        }
+        private void OnLoadHistorySalesView()
+        {
+            _dataView.LoadView(View.DataView.ViewType.HistorySales);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
