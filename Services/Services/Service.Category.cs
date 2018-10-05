@@ -1,9 +1,6 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services.Services
 {
@@ -16,7 +13,7 @@ namespace Services.Services
 
         public IEnumerable<Category> GetCategories()
         {
-            return _categoryRepository.GetCategories(); ;
+            return _categoryRepository.GetCategories();
         }
 
         public void AddCategory(Category category)

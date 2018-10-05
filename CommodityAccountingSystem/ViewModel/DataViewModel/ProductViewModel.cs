@@ -15,15 +15,12 @@ namespace CommodityAccountingSystem.ViewModel
         /// <summary>
         /// Список продуктов
         /// </summary>
-        private List<Models.Product> productsList;
+        private List<Models.Product> _productsList;
 
         /// <summary>
         /// Сервисы
         /// </summary>
         private Service _service;
-
-
-
         #endregion
 
         #region Constructors
@@ -33,17 +30,17 @@ namespace CommodityAccountingSystem.ViewModel
 
             _service = new Service();
 
-            productsList = _service.GetProducts().ToList();
+            _productsList = _service.GetProducts().ToList();
         }
         #endregion
 
         #region Properties
         public List<Models.Product> ProductsList
         {
-            get { return productsList; }
+            get { return _productsList; }
             set
             {
-                productsList = value;
+                _productsList = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
             }
         }

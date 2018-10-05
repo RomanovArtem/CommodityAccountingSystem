@@ -40,11 +40,19 @@ namespace Repositories
             new Product { Id = Guid.Parse("ee4e487e-c391-4014-ad8f-fab74bb89baf"), Title = "Lipton чай", PurchasePrice = 180, SalePrice = 210, Category = Categories.FirstOrDefault(c => c.Title == "Чай"), Manufacturer = Manufacturers.FirstOrDefault(m=>m.Title == "Lipton")}
         };
 
+        private static ICollection<HistorySales> historySales = new List<HistorySales>
+        {
+            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Томатный сок"), Count = 2, Amount = Products.FirstOrDefault(p => p.Title == "Томатный сок").SalePrice * 2},
+            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Greenfield чай"), Count = 4, Amount = Products.FirstOrDefault(p => p.Title == "Greenfield чай").SalePrice * 4}
+        };
+
 
         public static ICollection<Product> Products { get { return products; } }
 
         public static ICollection<Category> Categories { get { return categories; } }
 
         public static ICollection<Manufacturer> Manufacturers { get { return manufacturers; } }
+
+        public static ICollection<HistorySales> HistorySales { get { return historySales; } }
     }
 }

@@ -21,7 +21,9 @@ namespace Models
         /// Сумма
         /// </summary>
         public double Amount { get; set; }
-
+        /// <summary>
+        /// Истории продаж
+        /// </summary>
         public List<HistorySales> HistorySales { get; set; }
     }
 }
