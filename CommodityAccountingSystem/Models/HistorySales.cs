@@ -20,9 +20,5 @@ namespace Models
         /// Сумма
         /// </summary>
         public double Amount { get; set; }
-        /// <summary>
-        /// Чек
-        /// </summary>
-        public Check Check { get; set; }
     }
 }

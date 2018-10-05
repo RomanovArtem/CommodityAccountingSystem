@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Models
 {
@@ -20,5 +21,7 @@ namespace Models
         /// Сумма
         /// </summary>
         public double Amount { get; set; }
+
+        public List<HistorySales> HistorySales { get; set; }
     }
 }
