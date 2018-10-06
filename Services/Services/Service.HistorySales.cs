@@ -21,6 +21,5 @@ namespace Services.Services
         {
             _historySalesRepository.AddHistorySales(historySalec);
         }
-      
     }
 }

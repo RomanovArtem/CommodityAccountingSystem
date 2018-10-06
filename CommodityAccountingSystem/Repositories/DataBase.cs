@@ -42,8 +42,8 @@ namespace Repositories
 
         private static ICollection<HistorySales> historySales = new List<HistorySales>
         {
-            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Томатный сок"), Count = 2, Amount = Products.FirstOrDefault(p => p.Title == "Томатный сок").SalePrice * 2},
-            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Greenfield чай"), Count = 4, Amount = Products.FirstOrDefault(p => p.Title == "Greenfield чай").SalePrice * 4}
+            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Томатный сок"), Count = 2, Amount = Products.FirstOrDefault(p => p.Title == "Томатный сок").SalePrice * 2, Date = DateTime.MinValue},
+            new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Greenfield чай"), Count = 4, Amount = Products.FirstOrDefault(p => p.Title == "Greenfield чай").SalePrice * 4, Date = DateTime.MaxValue}
         };
 
 

@@ -23,6 +23,7 @@
 				<DataGridTextColumn Header="Название товара" Binding="{Binding Product.Title}" Width="*"/>
 				<DataGridTextColumn Header="Количество" Binding="{Binding Count}" Width="*"/>
 				<DataGridTextColumn Header="Сумма" Binding="{Binding Amount}" Width="*"/>
+				<DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="*"/>
 			</DataGrid.Columns>
 		</DataGrid>
 	</Grid>

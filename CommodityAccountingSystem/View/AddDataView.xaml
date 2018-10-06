@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:CommodityAccountingSystem.View"
       mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="700">
-	<Grid ShowGridLines="True">
+	<Grid >
 		<Grid.RowDefinitions>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
