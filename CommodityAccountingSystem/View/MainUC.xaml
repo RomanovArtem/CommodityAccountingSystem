@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:CommodityAccountingSystem.View"
             mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
-	<Grid ShowGridLines="True">
+	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
@@ -15,7 +15,7 @@
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
-		<StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 10 0 0">
+		<StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2" Margin="50 10 0 0">
 			<TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Добавить продажу" FontSize="18"/>
 			<StackPanel Orientation="Horizontal" Name="AddProduct" Margin="10">
 				<Label Content="Товар:" Width="120"/>

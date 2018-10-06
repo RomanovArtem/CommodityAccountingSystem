@@ -8,7 +8,7 @@
              d:DesignHeight="600" d:DesignWidth="600">
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition/>
+			<RowDefinition Height="50"/>
 			<RowDefinition/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
@@ -17,7 +17,7 @@
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
-		<StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" VerticalAlignment="Top">
+		<StackPanel Grid.ColumnSpan="3" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top">
 			<Button Command="{Binding LoadProductsComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
@@ -37,6 +37,6 @@
 				</TextBlock>
 			</Button>
 		</StackPanel>
-		<ContentPresenter Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" x:Name="OutputView" />
+		<ContentPresenter Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" x:Name="OutputView"/>
 	</Grid>
 </UserControl>
