@@ -1,36 +1,34 @@
 ﻿using CommodityAccountingSystem.View;
 using Services.Services;
 using System.ComponentModel;
-using System.Windows;
 
 namespace CommodityAccountingSystem.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
+        #region Fields
         private RelayCommand _checkUserCommand;
 
-        public string _login;
+        private MainWindow _mainWindow;
 
-        public string _password;
-
-        public string _errorText;
-
-        public MainWindow _mainWindow;
-
-
-        public ILoginWindows LoginWindows { get; set; }
-        /// <summary>
-        /// Сервисы
-        /// </summary>
         private Service _service;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        private string _login;
 
+        private string _password;
+
+        private string _errorText;
+        #endregion
+
+        #region Constructors
         public LoginViewModel()
         {
             _service = new Service();
         }
+        #endregion
 
+        #region Properties
+        public ILoginWindows LoginWindows { get; set; }
 
         public string Login
         {
@@ -41,7 +39,6 @@ namespace CommodityAccountingSystem.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(Login)));
             }
         }
-
 
         public string Password
         {
@@ -63,7 +60,10 @@ namespace CommodityAccountingSystem.ViewModel
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        #endregion
 
+        #region Command
         public RelayCommand CheckUserCommand
         {
             get
@@ -72,7 +72,9 @@ namespace CommodityAccountingSystem.ViewModel
                   new RelayCommand(CheckUser, CanCheck);
             }
         }
+        #endregion
 
+        #region Methods
         private void CheckUser()
         {
             var result = _service.Authentication(Login, Password);
@@ -89,14 +91,13 @@ namespace CommodityAccountingSystem.ViewModel
             else
             {
                 ErrorText = "Неверный логин/пароль. Повторите попытку!";
-
             }
-
         }
 
         private bool CanCheck()
         {
             return true;
         }
+        #endregion
     }
 }
