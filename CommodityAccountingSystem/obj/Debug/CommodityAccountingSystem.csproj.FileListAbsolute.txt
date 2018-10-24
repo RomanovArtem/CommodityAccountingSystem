@@ -32,3 +32,5 @@ C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.csproj.CopyComplete
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.exe
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.pdb
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\LoginWindow.g.cs
+C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\LoginWindow.baml

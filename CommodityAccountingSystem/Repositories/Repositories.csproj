@@ -43,10 +43,12 @@
     <Compile Include="DataBase.cs" />
     <Compile Include="IRepositories\ICategoryRepository.cs" />
     <Compile Include="IRepositories\IHistorySalesRepository.cs" />
+    <Compile Include="IRepositories\ILoginRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\HistorySalesRepository.cs" />
+    <Compile Include="Repositories\LoginRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>

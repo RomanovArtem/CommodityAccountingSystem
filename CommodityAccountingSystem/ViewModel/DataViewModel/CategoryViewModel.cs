@@ -29,11 +29,6 @@ namespace CommodityAccountingSystem.ViewModel
         public string _selectedCategory;
 
         /// <summary>
-        /// Сообщение пользователю
-        /// </summary>
-        private RelayCommand _ShowMessageCommand;
-
-        /// <summary>
         /// Сервисы
         /// </summary>
         private Service _service;
@@ -94,28 +89,12 @@ namespace CommodityAccountingSystem.ViewModel
         }
 
         #endregion
-
+        
         #region Commands
-        public RelayCommand ShowMessageCommand
-        {
-            get
-            {
-                return _ShowMessageCommand = _ShowMessageCommand ??
-                  new RelayCommand(OnShowMessage, CanShowMessage);
-            }
-        }
+        
         #endregion
 
         #region Methods
-        private bool CanShowMessage()
-        {
-            return true;
-        }
-
-        private void OnShowMessage()
-        {
-            _dataView.ShowMessage($"Вы ввели: {SelectedCategory} ");
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

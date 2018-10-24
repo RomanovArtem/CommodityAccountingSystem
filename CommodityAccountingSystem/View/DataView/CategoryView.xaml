@@ -17,22 +17,22 @@
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
-		<StackPanel VerticalAlignment="Top" Grid.Column="1" Margin="0 10 0 10">
-			<TextBlock Text="Выбрать категрию" FontSize="18"/>
-			<ComboBox Width="100" Margin="0,20,0,0"
+		<StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3">
+			<StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 10">
+				<TextBlock Text="Выбрать категорию:" HorizontalAlignment="Center" FontSize="18" Margin="0 10 0 0"/>
+				<ComboBox Width="100" Margin="10 10 0 0"
                   ItemsSource="{Binding CategoriesTitleList}"
                   SelectedItem="{Binding SelectedCategory}"/>
-			<Button Content="Показать" Command="{Binding ShowMessageCommand, Mode=OneTime}"
-                Width="70" Height="20" Margin="0,20,0,0"/>
+			</StackPanel>
+			<DataGrid AutoGenerateColumns="false" ItemsSource="{Binding ProductsList}" Margin="0 10 0 0">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*" />
+					<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
+					<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
+					<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
+					<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
+				</DataGrid.Columns>
+			</DataGrid>
 		</StackPanel>
-		<DataGrid Grid.Column="0" Grid.Row="1" AutoGenerateColumns="false" Grid.ColumnSpan="3" Grid.RowSpan="2" ItemsSource="{Binding ProductsList}">
-			<DataGrid.Columns>
-				<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*" />
-				<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
-				<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
-				<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
-				<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
-			</DataGrid.Columns>
-		</DataGrid>
 	</Grid>
 </UserControl>

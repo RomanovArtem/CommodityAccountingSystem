@@ -57,6 +57,7 @@
     <Compile Include="ViewModel\DataViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\HistorySalesViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\ProductViewModel.cs" />
@@ -74,6 +75,9 @@
     <Compile Include="View\AddDataView.xaml.cs">
       <DependentUpon>AddDataView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainUC.xaml.cs">
       <DependentUpon>MainUC.xaml</DependentUpon>
     </Compile>
@@ -89,6 +93,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DataView\ProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

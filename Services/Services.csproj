@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +45,13 @@
     <Compile Include="IServices\IService.Category.cs" />
     <Compile Include="IServices\IService.cs" />
     <Compile Include="IServices\IService.HistorySales.cs" />
+    <Compile Include="IServices\IService.Login.cs" />
     <Compile Include="IServices\IService.Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Service.Category.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Services\Service.HistorySales.cs" />
+    <Compile Include="Services\Service.Login.cs" />
     <Compile Include="Services\Service.Product.cs" />
   </ItemGroup>
   <ItemGroup>

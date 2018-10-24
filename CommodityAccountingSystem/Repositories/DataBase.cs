@@ -29,7 +29,6 @@ namespace Repositories
 
         private static ICollection<Product> products = new List<Product>
         {
-
             new Product { Id = Guid.Parse("70324a2e-190d-4a1b-a5bf-1d7b45839e92"), Title = "Томатный сок", PurchasePrice = 100,SalePrice = 120, Category = Categories.FirstOrDefault(c => c.Title == "Сок"), Manufacturer = Manufacturers.FirstOrDefault(m=>m.Title == "J7")},
             new Product { Id = Guid.Parse("54d3208d-8248-47ee-a43b-2270c92fa7c5"), Title = "Lays краб", PurchasePrice = 80, SalePrice = 90, Category = Categories.FirstOrDefault(c => c.Title == "Чипсы"), Manufacturer = Manufacturers.FirstOrDefault(m=>m.Title == "Lays")},
             new Product { Id = Guid.Parse("8450718c-970a-4d7f-b40f-11d413e1e438"), Title = "Nescafe кофе", PurchasePrice = 200, SalePrice = 250, Category = Categories.FirstOrDefault(c => c.Title == "Кофе"), Manufacturer = Manufacturers.FirstOrDefault(m=>m.Title == "Nescafe")},
@@ -46,6 +45,10 @@ namespace Repositories
             new HistorySales { Id = Guid.NewGuid(), Product = Products.FirstOrDefault(p => p.Title == "Greenfield чай"), Count = 4, Amount = Products.FirstOrDefault(p => p.Title == "Greenfield чай").SalePrice * 4, Date = DateTime.MaxValue}
         };
 
+        private static ICollection<User> users = new List<User>
+        {
+            new User { Id = Guid.NewGuid(), Login="admin", Password="123"}
+        };
 
         public static ICollection<Product> Products { get { return products; } }
 
@@ -54,5 +57,7 @@ namespace Repositories
         public static ICollection<Manufacturer> Manufacturers { get { return manufacturers; } }
 
         public static ICollection<HistorySales> HistorySales { get { return historySales; } }
+
+        public static ICollection<User> Users { get { return users; } }
     }
 }

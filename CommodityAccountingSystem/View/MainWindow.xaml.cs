@@ -65,7 +65,7 @@ namespace CommodityAccountingSystem.View
             vm.MainWindows = this;
             //делаем эту вьюмодел контекстом данных
             this.DataContext = vm;
-
+            
             //загрузка стартовой View
             LoadView(ViewType.Main);
         }
