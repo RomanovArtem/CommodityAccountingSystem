@@ -18,7 +18,7 @@
 				<TextBlock Width="50" Text="Пароль: "></TextBlock>
 				<TextBox Width="100" Text="{Binding Password}"></TextBox>
 			</StackPanel>
-			<Button Content="Вход" Command="{Binding CheckUserCommand, Mode=OneTime}" CommandParameter="{Binding ElementName=Password}"
+			<Button Content="Вход" Command="{Binding CheckUserCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0 20 0 0"/>
 		</StackPanel>
 	</Grid>

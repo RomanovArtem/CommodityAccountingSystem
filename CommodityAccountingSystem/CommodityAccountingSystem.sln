@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommodityAccountingSystem", "CommodityAccountingSystem.csproj", "{C09AB2B7-17B0-4768-BD90-29AB05DF5C2F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FC23026E-8128-497F-8F32-4344C1129EF2} = {FC23026E-8128-497F-8F32-4344C1129EF2}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}"
 EndProject

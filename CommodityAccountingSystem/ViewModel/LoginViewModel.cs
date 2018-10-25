@@ -1,4 +1,7 @@
 ﻿using CommodityAccountingSystem.View;
+using Ninject;
+using Services;
+using Services.IServices;
 using Services.Services;
 using System.ComponentModel;
 
@@ -11,19 +14,23 @@ namespace CommodityAccountingSystem.ViewModel
 
         private MainWindow _mainWindow;
 
-        private Service _service;
 
         private string _login;
 
         private string _password;
 
         private string _errorText;
+
+        public static IKernel AppKernel;
+        private IService _service;
+
         #endregion
 
         #region Constructors
         public LoginViewModel()
         {
-            _service = new Service();
+            AppKernel = new StandardKernel(new ServiceNinjectModule());
+            _service = AppKernel.Get<Service>();
         }
         #endregion
 
