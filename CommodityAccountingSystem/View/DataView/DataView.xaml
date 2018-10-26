@@ -27,13 +27,13 @@
 			<Button Command="{Binding LoadCategoriesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
-                        <Run Text="&#xE2AF;" />
+                        <Run Text="&#xe169;" />
 				</TextBlock>
 			</Button>
 			<Button Command="{Binding LoadHistorySalesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
-                        <Run Text="&#xE2AF;" />
+                        <Run Text="&#xe1d0;" />
 				</TextBlock>
 			</Button>
 		</StackPanel>

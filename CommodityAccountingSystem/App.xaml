@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:CommodityAccountingSystem.View"
              StartupUri="View/LoginWindow.xaml">
     <Application.Resources>
-         
     </Application.Resources>
 </Application>

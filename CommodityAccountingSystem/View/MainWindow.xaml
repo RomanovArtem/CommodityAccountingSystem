@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommodityAccountingSystem"
         mc:Ignorable="d"
-        Title="Учет продаж" Height="450" Width="600" WindowStartupLocation="CenterScreen">
+        Title="Учет продаж" Height="550" Width="900" WindowStartupLocation="CenterScreen">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="Auto" />
@@ -14,21 +14,22 @@
 		<!--Меню-->
 		<StackPanel Grid.Column="0" Margin="15">
 			<Button Command="{Binding LoadMainUCCommand, Mode=OneTime}"
-                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
-				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
-                        <Run Text="&#xe10f;" />
+					Background="White" BorderBrush="White"
+                Margin="10" Height="30">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14" Width="100">
+                        <Run Text="&#xe10f;   Главная" />
 				</TextBlock>
 			</Button>
 			<Button Command="{Binding LoadFirstUCCommand, Mode=OneTime}"
-                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
-				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
-                        <Run Text="&#xE2AF;" />
+                Margin="10" Height="30" HorizontalAlignment="Left" Background="White" BorderBrush="White">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14" Width="100">
+                        <Run Text="&#xe109;   Добавить" />
 				</TextBlock>
 			</Button>
 			<Button Command="{Binding LoadDataViewCommand, Mode=OneTime}"
-                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
-				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
-                        <Run Text="&#xe179;" />
+                Margin="10" Height="30" HorizontalAlignment="Left" Background="White" BorderBrush="White">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14" Width="100">
+                        <Run Text="&#xe179;   Данные" />
 				</TextBlock>
 			</Button>
 		</StackPanel>
