@@ -1,17 +1,22 @@
-﻿using Models;
+﻿using CommodityAccountingSystem.View;
+using CommodityAccountingSystem.View.AddDataView;
+using Models;
 using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
-namespace CommodityAccountingSystem.View
+namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 {
-    public class AddDataViewModel : INotifyPropertyChanged
+    public class AddProductViewModel : INotifyPropertyChanged
     {
         #region Fields
 
         private IMainWindows _mainWindows;
+
+        private AddProductView _addProductView;
+
 
         private string _inputTitleProduct;
 
@@ -44,14 +49,14 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Constructors
-        public AddDataViewModel(IMainWindows mainWindows)
+        public AddProductViewModel(IAddDataView addDataView /*IMainWindows mainWindows*/)
         {
-            _mainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
+            //_mainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
 
-            _service = new Service();
+            //_service = new Service();
 
-            _categoriesList = _service.GetCategories().ToList();
-            _categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
+            //_categoriesList = _service.GetCategories().ToList();
+            //_categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
         }
         #endregion
 

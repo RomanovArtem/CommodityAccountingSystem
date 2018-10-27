@@ -1,6 +1,7 @@
 ﻿using CommodityAccountingSystem.View;
-using CommodityAccountingSystem.ViewModel;
 using CommodityAccountingSystem.View.DataView;
+using CommodityAccountingSystem.ViewModel;
+using CommodityAccountingSystem.ViewModel.AddDataViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +66,7 @@ namespace CommodityAccountingSystem.View
             vm.MainWindows = this;
             //делаем эту вьюмодел контекстом данных
             this.DataContext = vm;
-            
+
             //загрузка стартовой View
             LoadView(ViewType.Main);
         }
@@ -85,7 +86,7 @@ namespace CommodityAccountingSystem.View
                     this.OutputView.Content = view;
                     break;
                 case ViewType.First:
-                    AddDataView viewF = new AddDataView();
+                    AddDataView.AddDataView viewF = new AddDataView.AddDataView();
                     AddDataViewModel vmF = new AddDataViewModel(this);
                     viewF.DataContext = vmF;
                     this.OutputView.Content = viewF;

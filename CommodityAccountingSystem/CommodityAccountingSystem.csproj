@@ -59,8 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AddDataViewModel\AddDataViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\CategoryViewModel.cs" />
-    <Compile Include="ViewModel\AddDataViewModel.cs" />
+    <Compile Include="ViewModel\AddDataViewModel\AddProductViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\HistorySalesViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="ViewModel\DataViewModel\ProductViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\DataViewModel\DataViewModel.cs" />
+    <Compile Include="View\AddDataView\AddProductView.xaml.cs">
+      <DependentUpon>AddProductView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DataView\CategoryView.xaml.cs">
       <DependentUpon>CategoryView.xaml</DependentUpon>
     </Compile>
@@ -77,7 +81,7 @@
     <Compile Include="View\DataView\ProductView.xaml.cs">
       <DependentUpon>ProductView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddDataView.xaml.cs">
+    <Compile Include="View\AddDataView\AddDataView.xaml.cs">
       <DependentUpon>AddDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginWindow.xaml.cs">
@@ -89,6 +93,10 @@
     <Compile Include="View\DataView\DataView.xaml.cs">
       <DependentUpon>DataView.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddDataView\AddProductView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DataView\CategoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,7 +125,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\AddDataView.xaml">
+    <Page Include="View\AddDataView\AddDataView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

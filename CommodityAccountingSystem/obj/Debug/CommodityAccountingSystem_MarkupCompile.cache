@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\
 CommodityAccountingSystem
 none
 false
 DEBUG;TRACE
-C:\Users\Artem\Source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\App.xaml
-8-1889016669
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\App.xaml
+9-1626139519
 
-21-1709284043
-16-2016495574
-View\DataView\CategoryView.xaml;View\DataView\HistorySalesView.xaml;View\DataView\ProductView.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\AddDataView.xaml;View\MainUC.xaml;View\DataView\DataView.xaml;
+23-2048109186
+161972067305
+View\AddDataView\AddProductView.xaml;View\DataView\CategoryView.xaml;View\DataView\HistorySalesView.xaml;View\DataView\ProductView.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\AddDataView\AddDataView.xaml;View\MainUC.xaml;View\DataView\DataView.xaml;
 
 False
 
