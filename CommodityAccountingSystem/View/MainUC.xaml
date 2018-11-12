@@ -6,37 +6,4 @@
              xmlns:local="clr-namespace:CommodityAccountingSystem.View"
             mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
-		</Grid.ColumnDefinitions>
-		<StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2" Margin="50 10 0 0">
-			<TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Добавить продажу" FontSize="18"/>
-			<StackPanel Orientation="Horizontal" Name="AddProduct" Margin="10">
-				<Label Content="Товар:" Width="120"/>
-				<ComboBox Width="100" Margin="10 0 0 0"
-                  ItemsSource="{Binding ProductsTitleList}"
-                  SelectedItem="{Binding SelectedProduct}"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Name="AddPurchasePriceProduct" Margin="10">
-				<Label Content="Количество:" Width="120"/>
-				<TextBox Margin="10 0 0 0" Width="100" Text="{Binding InputCount}" />
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Name="AddCategoryProduct" Margin="10">
-				<Label Content="Дата:" Width="120"/>
-				<DatePicker Margin="10 0 0 0" Text="{Binding InputDate}"/>
-			</StackPanel>
-			<StackPanel Orientation="Horizontal" Name="AddSalePriceProduct" Margin="10">
-				<Label Content="Сумма:" Width="120"/>
-				<TextBox Margin="10 0 0 0" Width="100" Text="{Binding InputAmount}" IsEnabled="False"/>
-			</StackPanel>
-			<Button Content="Добавить" Command="{Binding AddSaleCommand, Mode=OneTime}"
-                Width="70" Height="20" Margin="0 20 0 0"/>
-		</StackPanel>
-	</Grid>
 </UserControl>

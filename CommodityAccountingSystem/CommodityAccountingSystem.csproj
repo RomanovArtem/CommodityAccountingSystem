@@ -59,7 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AddDataViewModel\AddCategoriesViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel\AddDataViewModel.cs" />
+    <Compile Include="ViewModel\AddDataViewModel\AddHistorySalesViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel\AddProductViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\HistorySalesViewModel.cs" />
@@ -69,6 +71,12 @@
     <Compile Include="ViewModel\DataViewModel\ProductViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\DataViewModel\DataViewModel.cs" />
+    <Compile Include="View\AddDataView\AddCategoriesView.xaml.cs">
+      <DependentUpon>AddCategoriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddDataView\AddHistorySalesView.xaml.cs">
+      <DependentUpon>AddHistorySalesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AddDataView\AddProductView.xaml.cs">
       <DependentUpon>AddProductView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +101,14 @@
     <Compile Include="View\DataView\DataView.xaml.cs">
       <DependentUpon>DataView.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddDataView\AddCategoriesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddDataView\AddHistorySalesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AddDataView\AddProductView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

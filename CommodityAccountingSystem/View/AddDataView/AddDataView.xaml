@@ -18,19 +18,19 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 		<StackPanel Grid.ColumnSpan="3" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top">
-			<Button Command="{Binding LoadProductsComand, Mode=OneTime}"
+			<Button Command="{Binding LoadAddProductComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xe138;" />
 				</TextBlock>
 			</Button>
-			<Button Command="{Binding LoadCategoriesComand, Mode=OneTime}"
+			<Button Command="{Binding LoadAddCategoriesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xe169;" />
 				</TextBlock>
 			</Button>
-			<Button Command="{Binding LoadHistorySalesComand, Mode=OneTime}"
+			<Button Command="{Binding LoadAddHistorySalesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
                         <Run Text="&#xe1d0;" />

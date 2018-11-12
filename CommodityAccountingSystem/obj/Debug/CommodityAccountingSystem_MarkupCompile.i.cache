@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\App.xaml
-9-1626139519
+11-116227141
 
-271346377016
+311698815359
 161972067305
-View\AddDataView\AddProductView.xaml;View\DataView\CategoryView.xaml;View\DataView\HistorySalesView.xaml;View\DataView\ProductView.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\AddDataView\AddDataView.xaml;View\MainUC.xaml;View\DataView\DataView.xaml;
+View\AddDataView\AddCategoriesView.xaml;View\AddDataView\AddHistorySalesView.xaml;View\AddDataView\AddProductView.xaml;View\DataView\CategoryView.xaml;View\DataView\HistorySalesView.xaml;View\DataView\ProductView.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\AddDataView\AddDataView.xaml;View\MainUC.xaml;View\DataView\DataView.xaml;
 
 True
 

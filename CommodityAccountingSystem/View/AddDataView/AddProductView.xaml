@@ -17,7 +17,7 @@
 			<ColumnDefinition/>
 		</Grid.ColumnDefinitions>
 		<!--Добавление товара-->
-		<StackPanel HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 10 0 0">
+		<StackPanel HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Margin="0 10 0 0">
 			<TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Добавить товар" FontSize="18"/>
 			<StackPanel Orientation="Horizontal" Name="AddTitleProduct" Margin="10">
 				<Label Content="Наименование:" Width="120"/>
@@ -38,16 +38,6 @@
                   SelectedItem="{Binding SelectedCategory}"/>
 			</StackPanel>
 			<Button Content="Добавить" Command="{Binding AddProductCommand, Mode=OneTime}"
-                Width="70" Height="20" Margin="0 20 0 0"/>
-		</StackPanel>
-		<!--Добавление категории-->
-		<StackPanel  HorizontalAlignment="Left" Grid.Column="1" Grid.ColumnSpan="2" Margin="100 10 0 0">
-			<TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Добавить категорию" FontSize="18"/>
-			<StackPanel Orientation="Horizontal" Name="AddTitleCategory" Margin="10">
-				<Label Content="Наименование:" Grid.Column="0"/>
-				<TextBox Width="100" Text="{Binding InputTitleCategory}" Grid.Column="1"/>
-			</StackPanel>
-			<Button Content="Добавить" Command="{Binding AddCategoryCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0 20 0 0"/>
 		</StackPanel>
 	</Grid>

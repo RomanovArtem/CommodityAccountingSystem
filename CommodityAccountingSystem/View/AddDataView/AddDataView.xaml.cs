@@ -22,8 +22,8 @@ namespace CommodityAccountingSystem.View.AddDataView
     public enum ViewType
     {
         AddProducts,
-        Categories,
-        HistorySales,
+        AddCategories,
+        AddHistorySales,
     }
 
 
@@ -59,6 +59,20 @@ namespace CommodityAccountingSystem.View.AddDataView
                     AddProductViewModel viewModelAddProduct = new AddProductViewModel(this);
                     viewAddProduct.DataContext = viewModelAddProduct;
                     this.OutputView.Content = viewAddProduct;
+                    break;
+
+                case ViewType.AddCategories:
+                    AddCategoriesView viewAddCategories = new AddCategoriesView();
+                    AddCategoriesViewModel viewModelAddCategories = new AddCategoriesViewModel(this);
+                    viewAddCategories.DataContext = viewModelAddCategories;
+                    this.OutputView.Content = viewAddCategories;
+                    break;
+
+                case ViewType.AddHistorySales:
+                    AddHistorySalesView viewAddHistorySales = new AddHistorySalesView();
+                    AddHistorySalesViewModel viewModelHistorySales = new AddHistorySalesViewModel(this);
+                    viewAddHistorySales.DataContext = viewModelHistorySales;
+                    this.OutputView.Content = viewAddHistorySales;
                     break;
             }
         }

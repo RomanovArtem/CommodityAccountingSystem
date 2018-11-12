@@ -13,6 +13,12 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         private IAddDataView _addDataView;
         private IMainWindows _mainWindow;
 
+        private RelayCommand _loadAddProductComand;
+        private RelayCommand _loadAddHistorySalesComand;
+
+        private RelayCommand _loadAddCategoriesComand;
+
+
 
         #region Properties
         public IAddDataView AddDataView { get; set; }
@@ -27,5 +33,57 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         {
             _mainWindow = mainWindows;
         }
+
+
+        #region Commands
+        public RelayCommand LoadAddProductComand
+        {
+            get
+            {
+                return _loadAddProductComand = _loadAddProductComand ??
+                  new RelayCommand(OnLoadProductsView, CanLoadHistorySalesView);
+            }
+        }
+
+        public RelayCommand LoadAddCategoriesComand
+        {
+            get
+            {
+                return _loadAddCategoriesComand = _loadAddCategoriesComand ??
+                  new RelayCommand(OnLoadCategoriesView, CanLoadHistorySalesView);
+            }
+        }
+
+        public RelayCommand LoadAddHistorySalesComand
+        {
+            get
+            {
+                return _loadAddHistorySalesComand = _loadAddHistorySalesComand ??
+                  new RelayCommand(OnLoadHistorySalesView, CanLoadHistorySalesView);
+            }
+        }
+
+        private void OnLoadProductsView()
+        {
+            _addDataView.LoadView(View.AddDataView.ViewType.AddProducts);
+        }
+
+        private void OnLoadCategoriesView()
+        {
+            _addDataView.LoadView(View.AddDataView.ViewType.AddCategories);
+        }
+
+        private void OnLoadHistorySalesView()
+        {
+            _addDataView.LoadView(View.AddDataView.ViewType.AddHistorySales);
+        }
+
+        private bool CanLoadHistorySalesView()
+        {
+            return true;
+        }
+
+        #endregion
+
     }
 }

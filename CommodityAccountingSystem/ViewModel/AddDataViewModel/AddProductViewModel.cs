@@ -20,15 +20,27 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
         private string _inputTitleProduct;
 
-        private string _inputTitleCategory;
-
         private double _inputPurchasePriceProduct;
 
         private double _inputSalePriceProduct;
 
         private RelayCommand _addProductCommand;
 
-        private RelayCommand _addCategoryCommand;
+        private int _inputCount;
+
+        private double _inputAmount;
+
+        private DateTime _inputDate;
+
+        private List<string> _productsTitleList;
+
+        private List<Product> _productsList;
+
+        public string _selectedProduct;
+
+        private RelayCommand _addSaleCommand;
+
+        private Service _service;
 
         /// <summary>
         /// Список названий категорий 
@@ -45,18 +57,16 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         /// <summary>
         /// Сервисы
         /// </summary>
-        private Service _service;
         #endregion
 
         #region Constructors
         public AddProductViewModel(IAddDataView addDataView /*IMainWindows mainWindows*/)
         {
-            //_mainWindows = mainWindows ?? throw new ArgumentNullException(nameof(mainWindows));
 
-            //_service = new Service();
+            _service = new Service();
 
-            //_categoriesList = _service.GetCategories().ToList();
-            //_categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
+            _categoriesList = _service.GetCategories().ToList();
+            _categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
         }
         #endregion
 
@@ -101,6 +111,48 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputTitleProduct)));
             }
         }
+        public List<Product> ProductsList
+        {
+            get { return _productsList; }
+            set
+            {
+                _productsList = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ProductsList)));
+            }
+        }
+
+        public double InputAmount
+        {
+            get { return _inputAmount; }
+            set
+            {
+                _inputAmount = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputAmount)));
+            }
+        }
+
+        public string SelectedProduct
+        {
+            get { return _selectedProduct; }
+            set
+            {
+                _selectedProduct = value;
+                InputAmount = _inputCount * ProductsList.FirstOrDefault(p => p.Title == SelectedProduct).SalePrice;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedProduct)));
+            }
+        }
+
+
+        public int InputCount
+        {
+            get { return _inputCount; }
+            set
+            {
+                _inputCount = value;
+                InputAmount = _inputCount * ProductsList.FirstOrDefault(p => p.Title == SelectedProduct).SalePrice;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputCount)));
+            }
+        }
 
         public double InputPurchasePriceProduct
         {
@@ -122,16 +174,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             }
         }
 
-        public string InputTitleCategory
-        {
-            get { return _inputTitleCategory; }
-            set
-            {
-                _inputTitleCategory = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputTitleCategory)));
-            }
-        }
-
         #endregion
 
         #region Commands
@@ -144,14 +186,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             }
         }
 
-        public RelayCommand AddCategoryCommand
-        {
-            get
-            {
-                return _addCategoryCommand = _addCategoryCommand ??
-                  new RelayCommand(AddCategory, CanAdd);
-            }
-        }
         #endregion
 
         #region Methods
@@ -173,17 +207,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             _service.AddProduct(product);
         }
 
-        private void AddCategory()
-        {
-            var category = new Category
-            {
-                Id = Guid.NewGuid(),
-                Title = InputTitleCategory
-            };
-            _service.AddCategory(category);
-
-            CategoriesList = _service.GetCategories().ToList();
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

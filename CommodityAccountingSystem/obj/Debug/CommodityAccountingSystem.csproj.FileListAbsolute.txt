@@ -38,3 +38,7 @@ C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.csproj.CopyComplete
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.exe
 C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\CommodityAccountingSystem.pdb
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView\AddHistorySalesView.g.cs
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView\AddHistorySalesView.baml
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView\AddCategoriesView.g.cs
+C:\Users\Artem\source\Repos\CommodityAccountingSystem\CommodityAccountingSystem\obj\Debug\View\AddDataView\AddCategoriesView.baml
