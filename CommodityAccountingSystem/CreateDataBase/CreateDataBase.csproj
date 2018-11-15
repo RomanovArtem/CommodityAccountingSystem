@@ -81,6 +81,10 @@
     <Compile Include="Migrations\201811151617008_InitialCreate.Designer.cs">
       <DependentUpon>201811151617008_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811151634182_CreateNewSchemaForTables.cs" />
+    <Compile Include="Migrations\201811151634182_CreateNewSchemaForTables.Designer.cs">
+      <DependentUpon>201811151634182_CreateNewSchemaForTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +111,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811151617008_InitialCreate.resx">
       <DependentUpon>201811151617008_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811151634182_CreateNewSchemaForTables.resx">
+      <DependentUpon>201811151634182_CreateNewSchemaForTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

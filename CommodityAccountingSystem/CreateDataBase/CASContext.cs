@@ -7,11 +7,6 @@ namespace CreateDataBase
     {
         public CASContext() : base(@"Data Source=DESKTOP-G95ITR8\SQLEXPRESS;Initial Catalog=CAS_Base;Integrated Security=True") { }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.HasDefaultSchema(string.Empty);
-            base.OnModelCreating(modelBuilder);
-        }
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Check> Checks { get; set; }
