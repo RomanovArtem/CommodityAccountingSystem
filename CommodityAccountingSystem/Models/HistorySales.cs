@@ -1,12 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
     /// <summary>
     /// История продаж
     /// </summary>
+    [Table("HistorySales")]
     public class HistorySales
     {
+        [Key]
         public Guid Id { get; set; }
         /// <summary>
         /// Товар

@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using CreateDataBase;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace Repositories.Repositories
 {
     public class BaseRepository
     {
-        protected DataContext dbContext;
+        protected CASContext dbContext;
 
         public BaseRepository()
         {
-            dbContext = new DataContext();
+            dbContext = new CASContext();
 
             var categoriesList = new List<Category>();
             foreach (var category in dbContext.Categories)

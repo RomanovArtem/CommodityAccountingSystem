@@ -1,13 +1,17 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
     /// <summary>
     /// Доходы - расходы
     /// </summary>
+    [Table("IncomeAndExpenses")]
     public class IncomeAndExpense
     {
-        Guid Id { get; set; }
+        [Key]
+        public Guid Id { get; set; }
         /// <summary>
         /// Расход
         /// </summary>

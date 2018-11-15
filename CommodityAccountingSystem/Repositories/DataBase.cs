@@ -50,14 +50,14 @@ namespace Repositories
             new User { Id = Guid.NewGuid(), Login="admin", Password="123"}
         };
 
-        public static ICollection<Product> Products { get { return products; } }
+        public static ICollection<Product> Products         { get { return products; } }
 
-        public static ICollection<Category> Categories { get { return categories; } }
+        public static ICollection<Category> Categories          { get { return categories; } }
 
-        public static ICollection<Manufacturer> Manufacturers { get { return manufacturers; } }
+        public static ICollection<Manufacturer> Manufacturers   { get { return manufacturers; } }
 
-        public static ICollection<HistorySales> HistorySales { get { return historySales; } }
+        public static ICollection<HistorySales> HistorySales    { get { return historySales; } }
 
-        public static ICollection<User> Users { get { return users; } }
+        public static ICollection<User> Users                   { get { return users; } }
     }
 }

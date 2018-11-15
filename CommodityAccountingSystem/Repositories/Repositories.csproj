@@ -39,9 +39,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.5.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
@@ -88,6 +85,10 @@
     <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CreateDataBase\CreateDataBase.csproj">
+      <Project>{FB12136D-77E1-42B8-A926-1FA5B24B2EEE}</Project>
+      <Name>CreateDataBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{B29E2255-8A8F-427C-AB7C-F2E199BD36D8}</Project>
       <Name>Models</Name>
