@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace Repositories.Repositories
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : BaseRepository, ICategoryRepository
     {
         public Category GetCategoryById(Guid id)
         {
-            var categories = DataBase.Categories.FirstOrDefault(p => p.Id == id);
+            var categories = dbContext.Categories.FirstOrDefault(p => p.Id == id);
             return categories;
         }
 
