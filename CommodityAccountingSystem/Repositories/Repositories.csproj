@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAS_BaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAS_BaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="IRepositories\ICategoryRepository.cs" />
     <Compile Include="IRepositories\IHistorySalesRepository.cs" />
@@ -90,6 +95,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CAS_BaseDataSet.xsc">
+      <DependentUpon>CAS_BaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAS_BaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAS_BaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAS_BaseDataSet.xss">
+      <DependentUpon>CAS_BaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
