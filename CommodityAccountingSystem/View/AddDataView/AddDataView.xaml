@@ -30,6 +30,12 @@
                         <Run Text="&#xe169;" />
 				</TextBlock>
 			</Button>
+			<Button Command="{Binding LoadAddManufacturerComand, Mode=OneTime}"
+                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
+                        <Run Text="&#xe123;" />
+				</TextBlock>
+			</Button>
 			<Button Command="{Binding LoadAddHistorySalesComand, Mode=OneTime}"
                 Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
 				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">

@@ -7,13 +7,13 @@ using System.ComponentModel;
 
 namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 {
-    public class AddCategoriesViewModel : INotifyPropertyChanged
+    public class AddManufacturerViewModel : INotifyPropertyChanged
     {
         #region Fields
 
-        private string _inputTitleCategory;
+        private string _inputTitleManufacturer;
 
-        private RelayCommand _addCategoryCommand;
+        private RelayCommand _addManufacturerCommand;
 
         /// <summary>
         /// Сервисы
@@ -22,7 +22,7 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         #endregion
 
         #region Constructors
-        public AddCategoriesViewModel(IAddDataView addDataView)
+        public AddManufacturerViewModel(IAddDataView addDataView)
         {
             _service = new Service();
         }
@@ -30,13 +30,13 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
         #region Properties
 
-        public string InputTitleCategory
+        public string InputTitleManufacturer
         {
-            get { return _inputTitleCategory; }
+            get { return _inputTitleManufacturer; }
             set
             {
-                _inputTitleCategory = value;
-                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputTitleCategory)));
+                _inputTitleManufacturer = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputTitleManufacturer)));
             }
         }
 
@@ -44,12 +44,12 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
         #region Commands
 
-        public RelayCommand AddCategoryCommand
+        public RelayCommand AddManufacturerCommand
         {
             get
             {
-                return _addCategoryCommand = _addCategoryCommand ??
-                  new RelayCommand(AddCategory, CanAdd);
+                return _addManufacturerCommand = _addManufacturerCommand ??
+                  new RelayCommand(AddManufacturer, CanAdd);
             }
         }
         #endregion
@@ -60,15 +60,14 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             return true;
         }
 
-
-        private void AddCategory()
+        private void AddManufacturer()
         {
-            var category = new Category
+            var manufacturer = new Manufacturer
             {
                 Id = Guid.NewGuid(),
-                Title = InputTitleCategory
+                Title = InputTitleManufacturer
             };
-            _service.AddCategory(category);
+            _service.AddManufacturer(manufacturer);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

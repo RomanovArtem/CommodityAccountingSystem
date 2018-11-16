@@ -23,6 +23,7 @@ namespace CommodityAccountingSystem.View.AddDataView
     {
         AddProducts,
         AddCategories,
+        AddManufacturers,
         AddHistorySales,
     }
 
@@ -66,6 +67,13 @@ namespace CommodityAccountingSystem.View.AddDataView
                     AddCategoriesViewModel viewModelAddCategories = new AddCategoriesViewModel(this);
                     viewAddCategories.DataContext = viewModelAddCategories;
                     this.OutputView.Content = viewAddCategories;
+                    break;
+
+                case ViewType.AddManufacturers:
+                    AddManufacturerView viewAddManufacturer = new AddManufacturerView();
+                    AddManufacturerViewModel viewModelAddManufacturer = new AddManufacturerViewModel(this);
+                    viewAddManufacturer.DataContext = viewModelAddManufacturer;
+                    this.OutputView.Content = viewAddManufacturer;
                     break;
 
                 case ViewType.AddHistorySales:

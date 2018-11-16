@@ -14,6 +14,7 @@ namespace Services.Services
 
         private IProductRepository _productRepository;
         private ICategoryRepository _categoryRepository;
+        private IManufacturerRepository _manufacturerRepository;
         private IHistorySalesRepository _historySalesRepository;
         private ILoginRepository _loginRepository;
 
@@ -25,6 +26,7 @@ namespace Services.Services
 
             _productRepository = _appKernel.Get<ProductRepository>();
             _categoryRepository = _appKernel.Get<CategoryRepository>();
+            _manufacturerRepository = _appKernel.Get<ManufacturerRepository>();
             _historySalesRepository = _appKernel.Get<HistorySalesRepository>();
             _loginRepository = _appKernel.Get<LoginRepository>();
 

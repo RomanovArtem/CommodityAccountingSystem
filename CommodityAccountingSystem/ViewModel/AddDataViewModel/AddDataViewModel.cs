@@ -17,6 +17,8 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         private RelayCommand _loadAddHistorySalesComand;
 
         private RelayCommand _loadAddCategoriesComand;
+        private RelayCommand _loadAddManufacturerComand;
+
 
 
 
@@ -54,6 +56,15 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             }
         }
 
+        public RelayCommand LoadAddManufacturerComand
+        {
+            get
+            {
+                return _loadAddManufacturerComand = _loadAddManufacturerComand ??
+                  new RelayCommand(OnLoadManufaturerView, CanLoadHistorySalesView);
+            }
+        }
+
         public RelayCommand LoadAddHistorySalesComand
         {
             get
@@ -71,6 +82,11 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         private void OnLoadCategoriesView()
         {
             _addDataView.LoadView(View.AddDataView.ViewType.AddCategories);
+        }
+
+        private void OnLoadManufaturerView()
+        {
+            _addDataView.LoadView(View.AddDataView.ViewType.AddManufacturers);
         }
 
         private void OnLoadHistorySalesView()
