@@ -37,6 +37,12 @@
                   ItemsSource="{Binding CategoriesTitleList}"
                   SelectedItem="{Binding SelectedCategory}"/>
 			</StackPanel>
+			<StackPanel Orientation="Horizontal" Name="AddManufacturerProduct" Margin="10">
+				<Label Content="Производитель товара:" Width="120"/>
+				<ComboBox Width="100" Margin="10 0 0 0"
+                  ItemsSource="{Binding ManufacturerTitleList}"
+                  SelectedItem="{Binding SelectedManufacturer}"/>
+			</StackPanel>
 			<Button Content="Добавить" Command="{Binding AddProductCommand, Mode=OneTime}"
                 Width="70" Height="20" Margin="0 20 0 0"/>
 		</StackPanel>

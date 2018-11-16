@@ -26,9 +26,19 @@ namespace Models
         /// </summary>
         public double SalePrice { get; set; }
         /// <summary>
+        /// Id категории
+        /// </summary>
+        [ForeignKey("Category")]
+        public Guid CategoryId { get; set; }
+        /// <summary>
         /// Категория товара
         /// </summary>
         public Category Category { get; set; }
+        /// <summary>
+        /// Id производителя
+        /// </summary>
+        [ForeignKey("Manufacturer")]
+        public Guid ManufacturerId { get; set; }
         /// <summary>
         /// Производитель (фирма)
         /// </summary>

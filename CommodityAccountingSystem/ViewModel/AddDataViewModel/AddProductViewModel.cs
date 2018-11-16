@@ -54,6 +54,18 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
         /// </summary>
         public string _selectedCategory;
 
+        // <summary>
+        /// Список названий производителей 
+        /// </summary>
+        private List<string> _manufacturerTitleList;
+
+        private List<Manufacturer> _manufacturerList;
+
+        /// <summary>
+        /// Выбранный производитель
+        /// </summary>
+        public string _selectedManufacturer;
+
         /// <summary>
         /// Сервисы
         /// </summary>
@@ -67,6 +79,9 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
             _categoriesList = _service.GetCategories().ToList();
             _categoriesTitleList = _categoriesList.Select(c => c.Title).ToList();
+
+            _manufacturerList = _service.GetManufacturers().ToList();
+            _manufacturerTitleList = _manufacturerList.Select(m => m.Title).ToList();
         }
         #endregion
 
@@ -99,6 +114,37 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             {
                 _selectedCategory = value;
                 PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedCategory)));
+            }
+        }
+
+        public List<Manufacturer> ManufacturerList
+        {
+            get { return _manufacturerList; }
+            set
+            {
+                _manufacturerList = value;
+                ManufacturerTitleList = _manufacturerList.Select(m => m.Title).ToList();
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ManufacturerList)));
+            }
+        }
+
+        public List<string> ManufacturerTitleList
+        {
+            get { return _manufacturerTitleList; }
+            set
+            {
+                _manufacturerTitleList = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(ManufacturerTitleList)));
+            }
+        }
+
+        public string SelectedManufacturer
+        {
+            get { return _selectedManufacturer; }
+            set
+            {
+                _selectedManufacturer = value;
+                PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedManufacturer)));
             }
         }
 
@@ -202,11 +248,12 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
                 Title = InputTitleProduct,
                 PurchasePrice = InputPurchasePriceProduct,
                 SalePrice = InputSalePriceProduct,
-                Category = _categoriesList.FirstOrDefault(c => c.Title == SelectedCategory)
+                CategoryId = _categoriesList.FirstOrDefault(c => c.Title == SelectedCategory).Id,
+                ManufacturerId = _manufacturerList.FirstOrDefault(m => m.Title == SelectedManufacturer).Id
             };
+
             _service.AddProduct(product);
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

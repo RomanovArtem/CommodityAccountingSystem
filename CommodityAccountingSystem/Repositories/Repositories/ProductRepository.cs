@@ -12,6 +12,7 @@ namespace Repositories.Repositories
         public void AddProduct(Product product)
         {
             dbContext.Products.Add(product);
+            dbContext.SaveChanges();
         }
 
         public Product GetProductById(Guid id)
@@ -21,7 +22,14 @@ namespace Repositories.Repositories
 
         public IEnumerable<Product> GetProducts()
         {
-            return dbContext.Products.ToList();
+            var products = dbContext.Products.ToList();
+            foreach (var product in products)
+            {
+                product.Category = dbContext.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+                product.Manufacturer = dbContext.Manufacturers.FirstOrDefault(m => m.Id == product.ManufacturerId);
+            }
+
+            return products;
         }
 
         public IEnumerable<Product> GetProductsByCategoryId(Guid id)
