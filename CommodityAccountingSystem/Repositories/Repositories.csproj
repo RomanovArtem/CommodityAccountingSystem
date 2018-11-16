@@ -36,6 +36,15 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.7\lib\net45\Npgsql.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -69,9 +78,16 @@
     </Compile>
     <Compile Include="DataBase.cs" />
     <Compile Include="IRepositories\ICategoryRepository.cs" />
+    <Compile Include="IRepositories\ICheckRepository.cs" />
+    <Compile Include="IRepositories\IHistoryPriceRepository.cs" />
     <Compile Include="IRepositories\IHistorySalesRepository.cs" />
+    <Compile Include="IRepositories\IIncomeAndExpenseRepository.cs" />
     <Compile Include="IRepositories\ILoginRepository.cs" />
+    <Compile Include="IRepositories\IManufacturerRepository.cs" />
     <Compile Include="IRepositories\IProductRepository.cs" />
+    <Compile Include="IRepositories\IPurchaseRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
+    <Compile Include="IRepositories\IWarehouseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,9 +96,16 @@
     </Compile>
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\CheckRepository.cs" />
+    <Compile Include="Repositories\HistoryPriceRepository.cs" />
     <Compile Include="Repositories\HistorySalesRepository.cs" />
+    <Compile Include="Repositories\IncomeAndExpenseRepository.cs" />
     <Compile Include="Repositories\LoginRepository.cs" />
+    <Compile Include="Repositories\ManufacturerRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\PurchaseRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\WarehouseRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreateDataBase\CreateDataBase.csproj">

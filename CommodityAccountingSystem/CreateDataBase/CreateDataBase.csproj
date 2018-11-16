@@ -85,6 +85,10 @@
     <Compile Include="Migrations\201811151634182_CreateNewSchemaForTables.Designer.cs">
       <DependentUpon>201811151634182_CreateNewSchemaForTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811152214042_AddAdminToUser.cs" />
+    <Compile Include="Migrations\201811152214042_AddAdminToUser.Designer.cs">
+      <DependentUpon>201811152214042_AddAdminToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811151634182_CreateNewSchemaForTables.resx">
       <DependentUpon>201811151634182_CreateNewSchemaForTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811152214042_AddAdminToUser.resx">
+      <DependentUpon>201811152214042_AddAdminToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

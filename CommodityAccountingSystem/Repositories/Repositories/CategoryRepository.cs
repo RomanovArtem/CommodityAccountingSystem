@@ -10,18 +10,18 @@ namespace Repositories.Repositories
     {
         public Category GetCategoryById(Guid id)
         {
-            var categories = dbContext.Categories.FirstOrDefault(p => p.Id == id);
-            return categories;
+            return dbContext.Categories.FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Category> GetCategories()
         {
-            return DataBase.Categories.ToList();
+            return dbContext.Categories.ToList();
         }
 
         public void AddCategory(Category category)
         {
-            DataBase.Categories.Add(category);
+            dbContext.Categories.Add(category);
+            dbContext.SaveChanges();
         }
     }
 }

@@ -6,30 +6,27 @@ using System.Linq;
 
 namespace Repositories.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : BaseRepository, IProductRepository
     {
-        public ProductRepository()
-        {
-        }
 
         public void AddProduct(Product product)
         {
-            DataBase.Products.Add(product);
+            dbContext.Products.Add(product);
         }
 
         public Product GetProductById(Guid id)
         {
-            return DataBase.Products.FirstOrDefault(p => p.Id == id);
+            return dbContext.Products.FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetProducts()
         {
-            return DataBase.Products.ToList();
+            return dbContext.Products.ToList();
         }
 
         public IEnumerable<Product> GetProductsByCategoryId(Guid id)
         {
-            return DataBase.Products.Where(p => p.Category.Id == id).ToList();
+            return dbContext.Products.Where(p => p.Category.Id == id).ToList();
         }
     }
 }

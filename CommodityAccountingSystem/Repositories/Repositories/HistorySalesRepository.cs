@@ -6,21 +6,21 @@ using System.Linq;
 
 namespace Repositories.Repositories
 {
-    public class HistorySalesRepository : IHistorySalesRepository
+    public class HistorySalesRepository : BaseRepository, IHistorySalesRepository
     {
         public HistorySales GetHistorySalesById(Guid id)
         {
-            var historySales = DataBase.HistorySales.FirstOrDefault(p => p.Id == id);
-            return historySales;
+            return dbContext.HistorySales.FirstOrDefault(p => p.Id == id);
+
         }
         public IEnumerable<HistorySales> GetHistorySales()
         {
-            return DataBase.HistorySales.ToList();
+            return dbContext.HistorySales.ToList();
         }
 
         public void AddHistorySales(HistorySales historySales)
         {
-            DataBase.HistorySales.Add(historySales);
+            dbContext.HistorySales.Add(historySales);
         }
     }
 }
