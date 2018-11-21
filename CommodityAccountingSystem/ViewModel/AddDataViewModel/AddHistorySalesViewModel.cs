@@ -148,7 +148,7 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
             var historySales = new HistorySales
             {
                 Id = Guid.NewGuid(),
-                Product = ProductsList.FirstOrDefault(p => p.Title == SelectedProduct),
+                ProductId = ProductsList.FirstOrDefault(p => p.Title == SelectedProduct).Id,
                 Count = InputCount,
                 Amount = InputAmount,
                 Date = InputDate

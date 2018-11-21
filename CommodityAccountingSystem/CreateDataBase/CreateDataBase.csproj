@@ -157,6 +157,10 @@
     <Compile Include="Migrations\201811162207583_AddForProductForeignKeyCategoryAndForeignKeyManufacturer.Designer.cs">
       <DependentUpon>201811162207583_AddForProductForeignKeyCategoryAndForeignKeyManufacturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811211448421_AddForeignKey.cs" />
+    <Compile Include="Migrations\201811211448421_AddForeignKey.Designer.cs">
+      <DependentUpon>201811211448421_AddForeignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811162207583_AddForProductForeignKeyCategoryAndForeignKeyManufacturer.resx">
       <DependentUpon>201811162207583_AddForProductForeignKeyCategoryAndForeignKeyManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811211448421_AddForeignKey.resx">
+      <DependentUpon>201811211448421_AddForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,11 @@ namespace Models
         [Key]
         public Guid Id { get; set; }
         /// <summary>
+        /// id Товара
+        /// </summary>
+        [ForeignKey("Product")]
+        public Guid ProductId { get; set; }
+        /// <summary>
         /// Товар
         /// </summary>
         public Product Product { get; set; }
