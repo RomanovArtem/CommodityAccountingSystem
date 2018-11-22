@@ -14,7 +14,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
     public class AddHistorySalesViewModel : INotifyPropertyChanged
     {
         #region Fields
-        private IMainWindows _mainWindows;
 
         private int _inputCount;
 
@@ -153,7 +152,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
                 Amount = InputAmount,
                 Date = InputDate
             };
-            // _mainWindows.ShowMessage($@"{HistorySales.Id}, {HistorySales.Product.Title}, {HistorySales.Count}, {HistorySales.Amount}, {HistorySales.Date}");
             _service.AddHistorySales(historySales);
         }
 
@@ -164,7 +162,7 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
         private void OnShowMessage()
         {
-            _mainWindows.ShowMessage("Привет от MainUC");
+          // _mainWindows.ShowMessage("Привет от MainUC");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

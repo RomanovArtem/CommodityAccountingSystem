@@ -13,7 +13,7 @@ namespace Services.Services
 
         public IEnumerable<Product> GetProducts()
         {
-            return _productRepository.GetProducts(); ;
+            return _productRepository.GetProducts();
         }
         public IEnumerable<Product> GetProductsByCategoryId(Guid id)
         {
@@ -23,6 +23,11 @@ namespace Services.Services
         public void AddProduct(Product product)
         {
             _productRepository.AddProduct(product);
+        }
+
+        public void UpdateProduct(Product product)
+        {
+            _productRepository.UpdateProduct(product);
         }
     }
 }

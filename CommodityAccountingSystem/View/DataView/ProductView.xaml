@@ -19,12 +19,17 @@
 		</Grid.ColumnDefinitions>
 		<StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="3" VerticalAlignment="Top">
 			<TextBlock HorizontalAlignment="Center" Grid.ColumnSpan="3" Text="Все товары" FontSize="18"/>
-			<DataGrid AutoGenerateColumns="false" ItemsSource="{Binding ProductsList}" Margin=" 0 10 0 0">
+			<DataGrid AutoGenerateColumns="false" Name="ProductData" ItemsSource="{Binding ProductsList, Mode=OneWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" Margin=" 0 10 0 0">
+				<DataGrid.CellStyle>
+					<Style TargetType="DataGridCell">
+						<EventSetter Event="MouseDoubleClick" Handler="UpdateProduct" />
+					</Style>
+				</DataGrid.CellStyle>
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
 					<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
 					<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
-					<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
+					<DataGridTextColumn Header="Категория" Binding="{Binding Category.Id}" Width="*"/>
 					<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
 				</DataGrid.Columns>
 			</DataGrid>

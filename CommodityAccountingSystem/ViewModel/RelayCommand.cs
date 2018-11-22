@@ -19,7 +19,7 @@ namespace CommodityAccountingSystem.View
         #endregion
 
         #region Constructors
-        public RelayCommand(Action executeMethod)
+        public RelayCommand(Models.Product editProduct, Action executeMethod)
         {
             _TargetExecuteMethod = executeMethod;
         }

@@ -13,11 +13,6 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
     {
         #region Fields
 
-        private IMainWindows _mainWindows;
-
-        private AddProductView _addProductView;
-
-
         private string _inputTitleProduct;
 
         private double _inputPurchasePriceProduct;
@@ -30,15 +25,10 @@ namespace CommodityAccountingSystem.ViewModel.AddDataViewModel
 
         private double _inputAmount;
 
-        private DateTime _inputDate;
-
-        private List<string> _productsTitleList;
 
         private List<Product> _productsList;
 
         public string _selectedProduct;
-
-        private RelayCommand _addSaleCommand;
 
         private Service _service;
 

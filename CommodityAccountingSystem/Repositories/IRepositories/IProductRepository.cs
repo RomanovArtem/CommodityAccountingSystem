@@ -27,9 +27,15 @@ namespace Repositories.IRepositories
         IEnumerable<Product> GetProductsByCategoryId(Guid id);
 
         /// <summary>
-        /// добавление продукта
+        /// добавление товара
         /// </summary>
         /// <param name="product"></param>
         void AddProduct(Product product);
+
+        /// <summary>
+        /// обновление товара
+        /// </summary>
+        /// <param name="product"></param>
+        void UpdateProduct(Product product);
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace CommodityAccountingSystem.View
 {
-    public class DataViewModel : INotifyPropertyChanged
+    public class DataViewModel 
     {
         #region Fields
         private IMainWindows _mainWindow;
@@ -109,7 +109,6 @@ namespace CommodityAccountingSystem.View
             _dataView.LoadView(View.DataView.ViewType.HistorySales);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
         #endregion
     }
 }

@@ -15,6 +15,21 @@ namespace Repositories.Repositories
             dbContext.SaveChanges();
         }
 
+        public void UpdateProduct(Product product)
+        {
+            var oldProduct = dbContext.Products.FirstOrDefault(p => p.Id == product.Id);
+            if (oldProduct != null)
+            {
+
+                // добавить метод для проверки, кто объект изменился (лучше во вью модели)
+                // либо возвращать ошибку
+                dbContext.Products.Remove(oldProduct);
+                dbContext.SaveChanges();
+                dbContext.Products.Add(product);
+                dbContext.SaveChanges();
+            }
+        }
+
         public Product GetProductById(Guid id)
         {
             return dbContext.Products.FirstOrDefault(p => p.Id == id);
