@@ -1,5 +1,4 @@
 ﻿using CommodityAccountingSystem.View;
-using CommodityAccountingSystem.View.DataView;
 using Models;
 using Services.Services;
 using System.Collections.Generic;
@@ -10,6 +9,8 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
 {
     public class EditProductViewModel : INotifyPropertyChanged
     {
+        #region Fields
+
         private Product _editProduct;
 
         private Service _service;
@@ -24,7 +25,6 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
 
         private string _selectedManufacturerTitle;
 
-
         /// <summary>
         /// Список названий категорий 
         /// </summary>
@@ -34,7 +34,9 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
         /// Список названий производителей 
         /// </summary>
         private List<string> _manufacturerTitleList;
+        #endregion
 
+        #region Constructors
 
         public EditProductViewModel(Product editProduct)
         {
@@ -51,6 +53,10 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
             _selectedManufacturerTitle = editProduct.Manufacturer.Title;
 
         }
+
+        #endregion
+
+        #region Properties
 
         public List<string> CategoriesTitleList
         {
@@ -102,7 +108,7 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
             }
         }
 
-
+        #endregion
 
         #region Commands
         public RelayCommand SaveProductCommand
@@ -115,6 +121,8 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
         }
 
         #endregion
+
+        #region Methods
 
         private bool CanSave()
         {
@@ -132,6 +140,7 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
 
             _service.UpdateProduct(product);
         }
+        #endregion
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

@@ -29,7 +29,7 @@
 					<DataGridTextColumn Header="Название" Binding="{Binding Title}" Width="*"/>
 					<DataGridTextColumn Header="Цена закупки" Binding="{Binding PurchasePrice}" Width="*"/>
 					<DataGridTextColumn Header="Цена продажи" Binding="{Binding SalePrice}" Width="*"/>
-					<DataGridTextColumn Header="Категория" Binding="{Binding Category.Id}" Width="*"/>
+					<DataGridTextColumn Header="Категория" Binding="{Binding Category.Title}" Width="*"/>
 					<DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturer.Title}" Width="*"/>
 				</DataGrid.Columns>
 			</DataGrid>
