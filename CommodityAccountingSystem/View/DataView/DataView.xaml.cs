@@ -33,6 +33,7 @@ namespace CommodityAccountingSystem.View.DataView
         Products,
         Categories,
         HistorySales,
+        HistoryPrices,
     }
 
     /// <summary>
@@ -94,6 +95,13 @@ namespace CommodityAccountingSystem.View.DataView
                     viewHistorySales.DataContext = viewModelHistorySales;
                     //отображаем
                     this.OutputView.Content = viewHistorySales;
+                    break;
+
+                case ViewType.HistoryPrices:
+                    HistoryPriceView viewAddHistoryPrices = new HistoryPriceView();
+                    HistoryPriceViewModel viewModelHistoryPrices = new HistoryPriceViewModel(this);
+                    viewAddHistoryPrices.DataContext = viewModelHistoryPrices;
+                    this.OutputView.Content = viewAddHistoryPrices;
                     break;
             }
         }

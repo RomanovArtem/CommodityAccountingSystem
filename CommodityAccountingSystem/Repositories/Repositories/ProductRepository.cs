@@ -20,12 +20,18 @@ namespace Repositories.Repositories
             var oldProduct = dbContext.Products.FirstOrDefault(p => p.Id == product.Id);
             if (oldProduct != null)
             {
+                var historyPrices = dbContext.HistoryPrices.Where(hp => hp.ProductId == oldProduct.Id).ToList();
+
+
 
                 // добавить метод для проверки, кто объект изменился (лучше во вью модели)
                 // либо возвращать ошибку
                 dbContext.Products.Remove(oldProduct);
                 dbContext.SaveChanges();
                 dbContext.Products.Add(product);
+                dbContext.SaveChanges();
+
+                dbContext.HistoryPrices.AddRange(historyPrices);
                 dbContext.SaveChanges();
             }
         }

@@ -11,7 +11,7 @@ namespace Repositories.IRepositories
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        HistoryPrice GetHistoryPriceById(Guid id);
+        HistoryPrice GetHistoryPricesById(Guid id);
 
         /// <summary>
         /// получение всех историй цен
@@ -23,6 +23,13 @@ namespace Repositories.IRepositories
         /// добавление истории цен
         /// </summary>
         /// <param name="historyPrice"></param>
-        void AddHistoryPrice(HistoryPrice historyPrice);
+        void AddHistoryPrices(HistoryPrice historyPrice);
+
+        /// <summary>
+        /// Получение истории цен для товара
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
+        IEnumerable<HistoryPrice> GetHistoryPricesByProductId(Guid productId);
     }
 }

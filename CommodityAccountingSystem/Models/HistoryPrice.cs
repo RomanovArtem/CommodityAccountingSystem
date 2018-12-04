@@ -22,15 +22,23 @@ namespace Models
         /// </summary>
         public Product Product { get; set; }
         /// <summary>
-        /// Старая цена
+        /// Старая цена продажи
         /// </summary>
-        public double OldPrice { get; set; }
+        public double OldSalePrice { get; set; }
         /// <summary>
-        /// Новая цена
+        /// Новая цена продажи
         /// </summary>
-        public double NewPrice { get; set; }
+        public double NewSalePrice { get; set; }
         /// <summary>
-        /// Дата установки новой цены
+        /// Старая цена закупки
+        /// </summary>
+        public double OldPurchasePrice { get; set; }
+        /// <summary>
+        /// Новая цена закупки
+        /// </summary>
+        public double NewPurchasePrice { get; set; }
+        /// <summary>
+        /// Дата изменения
         /// </summary>
         public DateTime InstallationDateNewPrice { get; set; }
     }

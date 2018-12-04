@@ -29,6 +29,11 @@ namespace CommodityAccountingSystem.View
         /// </summary>
         private RelayCommand _loadHistorySalesComand;
 
+        /// <summary>
+        /// переход к истории цен
+        /// </summary>
+        private RelayCommand _loadHistoryPriceCommand;
+
         #endregion
 
         #region Constructors
@@ -78,7 +83,17 @@ namespace CommodityAccountingSystem.View
                   new RelayCommand(OnLoadHistorySalesView, CanLoadHistorySalesView);
             }
         }
+
+        public RelayCommand LoadHistoryPriceCommand
+        {
+            get
+            {
+                return _loadHistoryPriceCommand = _loadHistoryPriceCommand ??
+                  new RelayCommand(OnLoadHistoryPriceView, CanLoadHistoryPriceView);
+            }
+        }
         
+
         #endregion
 
         #region Methods
@@ -107,6 +122,15 @@ namespace CommodityAccountingSystem.View
         private void OnLoadHistorySalesView()
         {
             _dataView.LoadView(View.DataView.ViewType.HistorySales);
+        }
+
+        private bool CanLoadHistoryPriceView()
+        {
+            return true;
+        }
+        private void OnLoadHistoryPriceView()
+        {
+            _dataView.LoadView(View.DataView.ViewType.HistoryPrices);
         }
 
         #endregion

@@ -161,6 +161,10 @@
     <Compile Include="Migrations\201811211448421_AddForeignKey.Designer.cs">
       <DependentUpon>201811211448421_AddForeignKey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811240628029_AddOldPurchasePriceAndNewPurchasePriceForHistoryPrice.cs" />
+    <Compile Include="Migrations\201811240628029_AddOldPurchasePriceAndNewPurchasePriceForHistoryPrice.Designer.cs">
+      <DependentUpon>201811240628029_AddOldPurchasePriceAndNewPurchasePriceForHistoryPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -199,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811211448421_AddForeignKey.resx">
       <DependentUpon>201811211448421_AddForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811240628029_AddOldPurchasePriceAndNewPurchasePriceForHistoryPrice.resx">
+      <DependentUpon>201811240628029_AddOldPurchasePriceAndNewPurchasePriceForHistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

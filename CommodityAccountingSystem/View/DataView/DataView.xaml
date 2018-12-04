@@ -36,6 +36,12 @@
                         <Run Text="&#xe1d0;   Продажи" />
 				</TextBlock>
 			</Button>
+			<Button Command="{Binding LoadHistoryPriceCommand, Mode=OneTime}"
+                Margin="10" Width="30" Height="30" HorizontalAlignment="Left">
+				<TextBlock FontFamily="Segoe UI Symbol" FontSize="14">
+                        <Run Text="&#xe1d0;" />
+				</TextBlock>
+			</Button>
 		</StackPanel>
 		<ContentPresenter Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" x:Name="OutputView"  Margin="10 10 10 10"/>
 	</Grid>

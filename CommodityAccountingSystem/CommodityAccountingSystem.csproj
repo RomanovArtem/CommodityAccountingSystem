@@ -156,6 +156,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModel\AddDataViewModel\AddCategoriesViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel\AddDataViewModel.cs" />
+    <Compile Include="ViewModel\DataViewModel\HistoryPriceViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel\AddHistorySalesViewModel.cs" />
     <Compile Include="ViewModel\AddDataViewModel\AddManufacturerViewModel.cs" />
     <Compile Include="ViewModel\DataViewModel\CategoryViewModel.cs" />
@@ -170,6 +171,9 @@
     <Compile Include="ViewModel\DataViewModel\DataViewModel.cs" />
     <Compile Include="View\AddDataView\AddCategoriesView.xaml.cs">
       <DependentUpon>AddCategoriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DataView\HistoryPriceView.xaml.cs">
+      <DependentUpon>HistoryPriceView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AddDataView\AddHistorySalesView.xaml.cs">
       <DependentUpon>AddHistorySalesView.xaml</DependentUpon>
@@ -205,6 +209,10 @@
       <DependentUpon>DataView.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AddDataView\AddCategoriesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DataView\HistoryPriceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

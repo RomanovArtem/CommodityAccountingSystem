@@ -16,6 +16,7 @@ namespace Services.Services
         private ICategoryRepository _categoryRepository;
         private IManufacturerRepository _manufacturerRepository;
         private IHistorySalesRepository _historySalesRepository;
+        private IHistoryPriceRepository _historyPriceRepository;
         private ILoginRepository _loginRepository;
 
 
@@ -28,6 +29,7 @@ namespace Services.Services
             _categoryRepository = _appKernel.Get<CategoryRepository>();
             _manufacturerRepository = _appKernel.Get<ManufacturerRepository>();
             _historySalesRepository = _appKernel.Get<HistorySalesRepository>();
+            _historyPriceRepository = _appKernel.Get<HistoryPriceRepository>();
             _loginRepository = _appKernel.Get<LoginRepository>();
 
             this._methodTraceAspect = new MethodTraceAspect();

@@ -1,6 +1,7 @@
 ﻿using CommodityAccountingSystem.View;
 using Models;
 using Services.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -116,7 +117,7 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
             get
             {
                 return _saveProductCommand = _saveProductCommand ??
-                  new RelayCommand(SaveProduct, CanSave);
+                  new RelayCommand(SaveHistoryPriceAndOroduct, CanSave);
             }
         }
 
@@ -129,6 +130,19 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
             return true;
         }
 
+        private void SaveHistoryPriceAndOroduct()
+        {
+            var oldProduct = _service.GetProductById(EditProduct.Id);
+            var newProduct = EditProduct;
+
+            SaveProduct();
+
+            if (oldProduct.SalePrice != newProduct.SalePrice || oldProduct.PurchasePrice == newProduct.PurchasePrice)
+            {
+                SaveHistoryPrice(oldProduct, newProduct);
+            }
+        }
+
         private void SaveProduct()
         {
             var product = EditProduct;
@@ -139,6 +153,22 @@ namespace CommodityAccountingSystem.ViewModel.EditDataViewModel
             product.Manufacturer = null;
 
             _service.UpdateProduct(product);
+        }
+
+        private void SaveHistoryPrice(Product oldProduct, Product newProduct)
+        {
+            var historyPrice = new HistoryPrice()
+            {
+                Id = Guid.NewGuid(),
+                ProductId = newProduct.Id,
+                OldSalePrice = oldProduct.SalePrice,
+                NewSalePrice = newProduct.SalePrice,
+                OldPurchasePrice = oldProduct.PurchasePrice,
+                NewPurchasePrice = newProduct.PurchasePrice,
+                InstallationDateNewPrice = DateTime.Now
+            };
+
+            _service.AddHistoryPrices(historyPrice);
         }
         #endregion
 

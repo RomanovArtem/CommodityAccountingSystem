@@ -8,7 +8,7 @@ namespace Repositories.Repositories
 {
     public class HistoryPriceRepository : BaseRepository, IHistoryPriceRepository
     {
-        public void AddHistoryPrice(HistoryPrice historyPrice)
+        public void AddHistoryPrices(HistoryPrice historyPrice)
         {
             dbContext.HistoryPrices.Add(historyPrice);
             dbContext.SaveChanges();
@@ -16,12 +16,27 @@ namespace Repositories.Repositories
 
         public IEnumerable<HistoryPrice> GetHistoryPrices()
         {
-            return dbContext.HistoryPrices.ToList();
+            var historyPrices = dbContext.HistoryPrices.ToList();
+
+            foreach (var historyPrice in historyPrices)
+            {
+                historyPrice.Product = dbContext.Products.FirstOrDefault(p => p.Id == historyPrice.ProductId);
+            }
+
+            return historyPrices;
         }
 
-        public HistoryPrice GetHistoryPriceById(Guid id)
+        public HistoryPrice GetHistoryPricesById(Guid id)
         {
             return dbContext.HistoryPrices.FirstOrDefault(p => p.Id == id);
+        }
+
+        public IEnumerable<HistoryPrice> GetHistoryPricesByProductId(Guid productId)
+        {
+            return dbContext.HistoryPrices
+                .Where(hp => hp.ProductId == productId)
+                .OrderBy(hp => hp.InstallationDateNewPrice)
+                .ToList();
         }
     }
 }
